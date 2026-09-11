@@ -1,0 +1,11 @@
+{
+  "name": "ionq-ecdlp-public",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-11",
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "projects.yifanfrankzhang.com/ionq-ecdlp", "zone_name": "yifanfrankzhang.com" },
+    { "pattern": "projects.yifanfrankzhang.com/ionq-ecdlp/*", "zone_name": "yifanfrankzhang.com" }
+  ],
+  "assets": { "directory": "./website/dist", "binding": "ASSETS", "run_worker_first": true, "not_found_handling": "404-page" }
+}

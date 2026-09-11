@@ -1,10 +1,15 @@
 from pathlib import Path
-import json,re,html,shutil,subprocess
+import json,re,html,shutil,subprocess,os
 from html.parser import HTMLParser
 from visuals import fourier_visual
 
 ROOT=Path(__file__).resolve().parent
 OUT=ROOT/'dist'
+BASE=os.environ.get('SITE_BASE_PATH','').rstrip('/')
+assert not BASE or re.fullmatch(r'/[a-z0-9-]+',BASE), 'invalid base path'
+def mounted(text):
+ return re.sub(r'''(\b(?:href|src)=['"])/(?!/)''',lambda m:m[1]+BASE+'/',text)
+
 SOURCE='https://cdn.prod.website-files.com/68836d4838193cb461ebc7d2/6a9f3d3ada3cb06dec2ac20e_IonQ%20Fully%20Compiled%20End-to-End%20Resource%20Estimate%20for%20Breaking%20256-Bit%20Elliptic-Curve%20Signatures.pdf'
 TITLE='Breaking 256-bit elliptic-curve signatures: a circuit-to-hardware study'
 pages=[]
@@ -127,10 +132,10 @@ def template(p):
  words=prose_words(body)
  reading_tools='<div class="reading-tools"><button id="expand-derivations">Open all details</button><button id="collapse-derivations">Close all details</button></div>' if '<details' in body else ''
  title=p['title']
- return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><meta name="description" content="{e(p['summary'])}"><meta name="theme-color" content="#101f32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/vendor/katex/katex.min.css"><link rel="stylesheet" href="/styles.css"><script src="/site.js" defer></script></head><body>
+ return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><meta name="description" content="{e(p['summary'])}"><meta name="site-base" content="{e(BASE)}"><meta name="author" content="Yifan Frank Zhang"><meta name="theme-color" content="#101f32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/vendor/katex/katex.min.css"><link rel="stylesheet" href="/styles.css"><script src="/site.js" defer></script></head><body>
 <a class="skip" href="#main">Skip to lesson</a><header class="topbar"><div class="brandline"><a class="brand" href="/">ECDLP · Teaching notes</a><span class="edition">IonQ paper · 3 September 2026</span><button class="utility mobile-button" id="menu-toggle" aria-expanded="false" aria-controls="top-navigation">Parts</button><button class="utility mobile-button" id="chapters-toggle" aria-expanded="false" aria-controls="sidebar">Lessons</button><button class="utility" data-open-notation>Notation</button></div><nav class="topnav" id="top-navigation" aria-label="Paper parts">{top}</nav></header>
 <div class="sitegrid"><aside class="sidebar" id="sidebar" aria-label="All lessons"><div class="searchwrap"><label for="lesson-search">Find a lesson</label><input id="lesson-search" type="search" placeholder="Section or technique" autocomplete="off"></div><nav class="lessonsnav"><section class="navgroup"><a href="/" class="{'current' if p['slug']=='index' else ''}">Start here · Result and reading path</a></section>{side}<p id="no-results" class="no-results" hidden>No matching lessons.</p></nav></aside>
-<main class="main" id="main"><div class="eyebrow">{e(part(p))}</div><h1>{e(title)}</h1><p class="deck">{e(p['summary'])}</p><div class="sourceline"><span>{max(1,round(words/210))} min core reading</span><span>{srcstr or 'Companion lesson · primary sources below'}</span><a href="/lesson/audit/">Coverage &amp; audit</a></div>{reading_tools}<article class="lesson">{body}{sources}</article>{prevnext}<footer class="footer">Independent teaching notes · <a href="{SOURCE}" target="_blank" rel="noopener">Häner et al., source paper</a> · <a href="/lesson/conclusion/#limitations">Limitations</a> · <a href="/lesson/notation/">Notation</a> · <a href="/lesson/audit/">Source coverage</a></footer></main>
+<main class="main" id="main"><div class="eyebrow">{e(part(p))}</div><h1>{e(title)}</h1><p class="deck">{e(p['summary'])}</p><div class="sourceline"><span>{max(1,round(words/210))} min core reading</span><span>{srcstr or 'Companion lesson · primary sources below'}</span><a href="/lesson/audit/">Coverage &amp; audit</a></div>{reading_tools}<article class="lesson">{body}{sources}</article>{prevnext}<footer class="footer"><a href="https://projects.yifanfrankzhang.com/">Yifan Frank Zhang · Public projects</a> · Independent teaching notes · <a href="{SOURCE}" target="_blank" rel="noopener">Häner et al., source paper</a> · <a href="/lesson/conclusion/#limitations">Limitations</a> · <a href="/lesson/notation/">Notation</a> · <a href="/lesson/audit/">Source coverage</a></footer></main>
 <aside class="toc" aria-label="On this page"><span>On this page</span><nav>{''.join(f'<a href="#{e(s)}">{e(t)}</a>' for s,t in headers)}<a href="#sources">Sources</a></nav></aside></div>
 <dialog class="dialog" id="notation-dialog" aria-labelledby="notation-title"><div class="dialoghead"><h2 id="notation-title">Notation and physical meaning</h2><button id="close-notation" aria-label="Close notation">Close</button></div><div class="dialogbody"><p>Definitions are also given where they are used. <a href="/lesson/notation/">Open the full notation page</a>.</p>{definitions()}</div></dialog></body></html>'''
 
@@ -141,8 +146,8 @@ for folder in ['assets','data','vendor']:
 for file in ['styles.css','site.js','favicon.svg']:shutil.copy2(ROOT/file,OUT/file)
 for p in pages:
  dest=OUT/'index.html' if p['slug']=='index' else OUT/'lesson'/p['slug']/'index.html'
- dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(template(p))
-(OUT/'sitemap.json').write_text(json.dumps([{'title':p['title'],'url':url(p),'group':part(p),'sourcePages':p.get('sourcePages',[])} for p in pages],indent=2))
+ dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(mounted(template(p)))
+(OUT/'sitemap.json').write_text(json.dumps([{'title':p['title'],'url':BASE+url(p),'group':part(p),'sourcePages':p.get('sourcePages',[])} for p in pages],indent=2))
 (ROOT/'data/coverage-generated.json').write_text(json.dumps({'pages':len(pages),'figures':figrefs,'sections':[{'slug':p['slug'],'title':p['title'],'sourcePages':p.get('sourcePages',[])} for p in pages]},indent=2))
 print(f'Generated {len(pages)} pages, {len(figrefs)} distinct source figure panels.')
 subprocess.run(['node',str(ROOT/'render-math.cjs'),str(OUT)],check=True)

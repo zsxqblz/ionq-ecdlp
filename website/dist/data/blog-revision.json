@@ -1,0 +1,1175 @@
+{
+  "date": "2026-09-11",
+  "scope": "Editorial and mathematical exposition audit; source-level comparison and executable teaching checks, not independent reproduction of the internal compiler or hardware simulations.",
+  "lessons": [
+    {
+      "slug": "shor-ecdlp",
+      "sourcePages": [
+        7,
+        8
+      ],
+      "subsections": [
+        "Two moduli, one hidden relation",
+        "A line becomes a Fourier constraint",
+        "Qubits broaden the peaks",
+        "First do the computation classically",
+        "Now make the lookup coherent"
+      ],
+      "removed_editorial_instructions": [
+        "Define the discrete-log problem and its two moduli before constructing the quantum function that hides the key in equal outputs.",
+        "Explain the physical contents of each register; a point requires two coordinate registers in this implementation.",
+        "Derive the inherited Fourier-sampling mechanism: inputs producing one point interfere to reveal a linear equation for the secret key.",
+        "Explain a practical limitation, not a new speedup: binary-sized registers broaden the ideal peaks and require a separate success bound.",
+        "Reduce expensive point additions by classically precomputing the contribution of each group of scalar bits.",
+        "Identify the modular division, multiplication and squaring that make each point addition expensive.",
+        "Implement table selection coherently; the precomputed entries become gates, while only the selected word occupies the output register.",
+        "Show exactly how address-controlled bit flips implement a small table, before introducing the more efficient traversal.",
+        "Avoid testing the same address independently for every coordinate bit by reusing a selector.",
+        "Reduce nonlinear work by sharing one AND computation between the two branches of a lookup.",
+        "Combine lookup and point addition while restoring temporary storage; the optimized schedule later trades extra lookups for fewer live qubits."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "success-probability",
+      "sourcePages": [
+        8,
+        9,
+        10
+      ],
+      "subsections": [
+        "The headline combines different claims",
+        "Wrong phases count as wrong answers",
+        "Randomization gives a linear amplitude penalty",
+        "Two routes to the reported probabilities",
+        "What one attempt buys"
+      ],
+      "removed_editorial_instructions": [
+        "Separate the probability claims that are multiplied or bounded to obtain an end-to-end success estimate.",
+        "Count relative-phase errors as oracle failures even when the computed coordinates look correct.",
+        "Use random masks to bound the damage from bad inputs at the amplitude level.",
+        "Assemble the conservative and heuristic success estimates with their different recovery assumptions.",
+        "Explain how independent repetitions change the chance of recovering a valid key."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "failure-analysis",
+      "sourcePages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "subsections": [
+        "Approximation is paid for in success probability",
+        "Reversibility adds an exceptional point",
+        "Short carries can lose values",
+        "Short comparisons can lose phases",
+        "Transfer field counts to curve probabilities",
+        "A mask makes a carry count useful",
+        "The dominant term is measured, then bounded",
+        "Count first failures; no independence is needed"
+      ],
+      "removed_editorial_instructions": [
+        "Identify all deliberate approximation mechanisms before assigning a total failure probability.",
+        "Include exceptional inputs created by reversible cleanup as well as ordinary affine point addition.",
+        "Bound when shortening modular-reduction arithmetic changes the computed value.",
+        "Bound when shortening a cleanup comparison leaves an incorrect relative phase.",
+        "Convert field-element failure counts into probabilities for points drawn from the elliptic curve.",
+        "Randomize the square-subtract input so carry-failure counts apply to the actual computation.",
+        "Use sampled gcd failures with a confidence bound instead of treating observed failure frequency as exact.",
+        "Combine first-failure events without assuming that the different arithmetic errors are independent."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "shor-proos-zalka",
+      "sourcePages": [],
+      "subsections": [
+        "The algorithmic structure IonQ inherits",
+        "The secret is a direction, not an output",
+        "A permutation needs clean temporary space",
+        "Reversible inversion creates the scheduling problem"
+      ],
+      "removed_editorial_instructions": [
+        "Locate the original algorithmic contribution before discussing the later arithmetic optimizations.",
+        "Show how equal point outputs encode the secret direction that Fourier sampling reveals.",
+        "Build a clean reversible translation so temporary data cannot destroy the interference needed by the algorithm.",
+        "Explain why reversible inversion requires a common schedule and stored branch information in superposition."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "semiclassical-qft",
+      "sourcePages": [],
+      "subsections": [
+        "Measure early, preserve the distribution",
+        "The whole argument is one measurement identity",
+        "Quantum controls become classical wires",
+        "A visual check: decode five",
+        "Cancel the known tail",
+        "Reuse the controls, retain the accumulator"
+      ],
+      "removed_editorial_instructions": [
+        "State which output distribution is preserved when Fourier-transform qubits are measured early.",
+        "Prove the measurement identity that permits replacing a quantum control by its classical outcome.",
+        "Translate the identity into a circuit with adaptive rotations and classical control wires.",
+        "Check the order of measured bits and corrections on one small phase-estimation example.",
+        "Choose each rotation to cancel the phase contribution already revealed by earlier outcomes.",
+        "Use early measurement to reuse scalar-control qubits while keeping the curve accumulator coherent."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "mosca-success-bound",
+      "sourcePages": [],
+      "subsections": [
+        "Why the conservative baseline is 65.7%",
+        "Two measurements of the same hidden label",
+        "Bound a peak, then convert it to an integer",
+        "One extra bit makes both neighbors useful",
+        "The omitted 48 bits need an additional argument"
+      ],
+      "removed_editorial_instructions": [
+        "Identify the rigorous ideal-algorithm baseline before arithmetic and hardware errors are included.",
+        "Explain why the two phase estimates share one underlying group eigenlabel.",
+        "Bound the probability of a useful Fourier outcome close enough to recover the desired integer.",
+        "Show how one extra precision bit makes both neighboring Fourier outcomes useful for rounding.",
+        "Identify the gap between the full-precision bound and the implementation that omits scalar windows."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "ekera-postprocessing",
+      "sourcePages": [],
+      "subsections": [
+        "Missing quantum bits become classical search",
+        "Fix the sign and register lengths",
+        "A useful sample has two small corrections",
+        "Why 99% is heuristic",
+        "The tradeoff has a square-root search cost",
+        "What the headline leaves unspecified"
+      ],
+      "removed_editorial_instructions": [
+        "Explain the quantum work saved by accepting less precise samples and doing more classical recovery.",
+        "Define the phase samples and sign convention before writing the recovery equation.",
+        "Express imperfect samples using small integer corrections that classical search can recover.",
+        "Identify the distributional assumption behind the high quoted recovery probability.",
+        "Quantify the search cost paid when quantum precision is reduced.",
+        "State which recovery parameters and implementation details are needed to reproduce the quoted performance."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "xii-architecture",
+      "sourcePages": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "subsections": [
+        "The missing conversion: gates into days",
+        "Three clocks, three meanings of depth",
+        "Where each saving comes from",
+        "The supply must match consumption",
+        "Which parts are established?"
+      ],
+      "removed_editorial_instructions": [
+        "Identify the physical costs missing from an arithmetic gate count.",
+        "Separate physical operation time, measurement layers and algorithm depth before converting between them.",
+        "Assign each architectural saving to the component that supplies it.",
+        "Match preparation and transport capacity to consumption so a local speedup does not create a different bottleneck.",
+        "Distinguish circuit identities, simulation results and projected hardware behavior in the final estimate."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "xii-a-device",
+      "sourcePages": [
+        21,
+        22
+      ],
+      "subsections": [
+        "Dense memory, with shared overhead",
+        "Where the 19,397 ions go",
+        "Each code has a different job",
+        "The architectural savings",
+        "Tiny error × enormous exposure"
+      ],
+      "removed_editorial_instructions": [
+        "Explain how dense code blocks store data while shared resources provide access and correction.",
+        "Account for the supporting resources that must be added to the memory footprint.",
+        "Assign separate storage, verification and distillation jobs to the different codes.",
+        "Identify the workload-specific changes relative to the inherited architecture.",
+        "Show why a very small per-operation error can matter over the complete computation."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "xii-b-swap-loss",
+      "sourcePages": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "subsections": [
+        "Loss can move, but cannot branch",
+        "A detector that catches both swaps",
+        "Measured at higher noise, extrapolated to the target"
+      ],
+      "removed_editorial_instructions": [
+        "Specify how loss moves through a two-ion operation before assessing any detector circuit.",
+        "Detect the missing carrier even when swaps would hide it from the earlier measurement sequence.",
+        "Reduce extra hardware by using syndrome ancillas for loss detection.",
+        "Separate directly simulated detector performance from extrapolation to the target noise level."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "xii-c-reusable-cats",
+      "sourcePages": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "subsections": [
+        "Reuse the carriers, reprepare the state",
+        "One loop can keep up with one block",
+        "Two bundles hand off a measurement stream",
+        "What the pipeline assumes"
+      ],
+      "removed_editorial_instructions": [
+        "Define what is physically reused and which preparation operations must be repeated.",
+        "Check whether the local preparation loop can supply states at the rate a memory block consumes them.",
+        "Translate preparation turnaround into the number of simultaneously needed carrier registers.",
+        "Evaluate the local supply condition for the main memory code.",
+        "Overlap preparation and delivery using two bundles so measurements can continue while the next resource travels.",
+        "State the feedforward and transport assumptions required to sustain that supply rate."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "xii-d-claw",
+      "sourcePages": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "subsections": [
+        "Store Clifford gates as changed measurement questions",
+        "Commuting is not enough: supports must be disjoint",
+        "Turn a stored frame into a physical state while idle",
+        "A cubic resource leaves only quadratic corrections",
+        "What was checked"
+      ],
+      "removed_editorial_instructions": [
+        "Explain how a deferred Clifford changes later observables, rather than treating the gate as costless in every context.",
+        "Check physical support overlap in addition to logical commutation before scheduling measurements together.",
+        "Move frame-clearing work off the active arithmetic path by preparing and applying it while a block is idle.",
+        "Size the clearing resources to keep up with the rate at which the computation reaches new blocks.",
+        "Use the teleportation step to move the working state as well as clear its frame.",
+        "Derive the Clifford corrections left by CCZ injection and explain their place in the measurement schedule.",
+        "State which parts of the frame-clearing and injection construction were explicitly checked."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "appendix-f-swap-loss",
+      "sourcePages": [
+        63,
+        64
+      ],
+      "subsections": [
+        "How much does the swap probability matter?",
+        "The controlled sweep",
+        "Convert exposure without hiding uncertainty",
+        "A narrow robustness result"
+      ],
+      "removed_editorial_instructions": [
+        "Define the model parameter whose effect on memory performance is being tested.",
+        "Vary the swap probability while keeping the remaining simulation conditions controlled.",
+        "Convert measured exposure and failures into rates without suppressing statistical uncertainty.",
+        "State the limited robustness conclusion supported by the tested range and sample size."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "ref-walking-cat",
+      "sourcePages": [],
+      "subsections": [
+        "The framework inherited by the main paper",
+        "Make the code checks commute by construction",
+        "Turn polynomial terms into transport positions",
+        "Cancel support with a stabilizer",
+        "A long Pauli, one coupling per carrier",
+        "Readout confidence sets the stopping time",
+        "Connect two blocks through cat parity"
+      ],
+      "removed_editorial_instructions": [
+        "Identify the architecture primitives imported into the resource estimate.",
+        "Construct compatible quantum checks from binary matrices before discussing their physical layout.",
+        "Relate the code’s algebraic couplings to positions reached through cyclic ion motion.",
+        "Choose equivalent logical operators with more convenient physical support by multiplying stabilizers.",
+        "Measure a long logical Pauli without coupling one vulnerable ancilla repeatedly to all its data qubits.",
+        "Include repeated readout when converting a logical measurement into expected physical latency.",
+        "Use cat parity to extend the measurement interface across separate code blocks."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "ref-cat-measurements",
+      "sourcePages": [],
+      "subsections": [
+        "Prevent one ancilla fault from spreading across data",
+        "The dangerous alternative",
+        "Derive the cat measurement",
+        "Verification blocks correlated preparation faults",
+        "Verification and repetition address different errors",
+        "Parallelism needs disjoint physical supports"
+      ],
+      "removed_editorial_instructions": [
+        "Explain why measuring a many-qubit Pauli needs protection against ancilla faults.",
+        "Show the error-propagation problem with a single ancilla coupled sequentially to many data qubits.",
+        "Derive how separate cat carriers collectively reveal only the desired Pauli parity.",
+        "Illustrate that parity measurement projects onto an eigenspace without resolving every data bit.",
+        "Reject correlated preparation errors before the cat state interacts with the encoded data.",
+        "Distinguish prevention of data damage from suppression of an incorrect reported measurement outcome.",
+        "Check whether separate logical measurements can use disjoint physical supports at the same time."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "ref-gate-teleportation",
+      "sourcePages": [],
+      "subsections": [
+        "Move the difficult gate into a prepared state",
+        "Diagonal injection has two branches",
+        "The same mechanism for a cubic phase",
+        "Why the correction is Clifford",
+        "Change the target basis",
+        "The variant that also replaces the carrier"
+      ],
+      "removed_editorial_instructions": [
+        "Move the non-Clifford work into a resource state that can be prepared before it is needed.",
+        "Derive both outcomes of a one-bit injection to make its correction rule explicit.",
+        "Extend injection to the three-bit cubic phase defining CCZ.",
+        "Show why the outcome-dependent correction has only quadratic phases and is therefore Clifford.",
+        "Convert between CCZ and Toffoli by changing the target basis.",
+        "Distinguish injection into existing data from teleportation that transfers the state to new carriers."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "ref-logical-clinr",
+      "sourcePages": [],
+      "subsections": [
+        "Share readout checks, then teleport through a Clifford",
+        "Encode the outcomes as a classical codeword",
+        "Reject a resource, or decode unknown data",
+        "Put the Clifford into stabilizers",
+        "Teleport in, release the old carriers",
+        "Prepare ahead, once the frame is known"
+      ],
+      "removed_editorial_instructions": [
+        "Explain how coded measurements support preparation of a Clifford resource for later injection.",
+        "Add redundant products of measured Paulis so their outcomes form a classical error-detecting or error-correcting code.",
+        "Show on two outcomes how one product measurement provides a shared consistency check.",
+        "Distinguish rejecting a bad prepared resource from decoding measurements on unknown data that cannot simply be discarded.",
+        "Represent the desired Clifford transformation through stabilizers of a resource state.",
+        "Apply that resource through teleportation and identify the resulting corrections and released carriers.",
+        "Prepare the clearing operation after the accumulated frame is known, but before the data block needs it."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "ref-loss-detection",
+      "sourcePages": [],
+      "subsections": [
+        "The modification is one gate, with a physical reason",
+        "Three kinds of damaged state",
+        "Detect membership without learning the state",
+        "Two swaps create a false healthy signal",
+        "Replacing a carrier need not erase the logical state",
+        "A late flag still constrains the history",
+        "Read carriers after transferring their information",
+        "The boundary of the proof"
+      ],
+      "removed_editorial_instructions": [
+        "Locate the circuit modification needed when loss can exchange positions during a gate.",
+        "Distinguish leakage from the computational subspace, an absent carrier, and an ordinary qubit error.",
+        "Detect whether a carrier is in the allowed subspace without learning its encoded quantum value.",
+        "Exhibit the swap sequence that can make a lost carrier appear healthy to the earlier detector.",
+        "Explain how code redundancy permits replacing a damaged physical carrier without measuring the logical state.",
+        "Use a later loss flag to constrain which earlier operations may have been affected.",
+        "Compare detection strategies that first move the quantum information away from the carrier being measured.",
+        "State the physical assumptions under which the detector argument applies."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "point-addition",
+      "sourcePages": [
+        11,
+        12
+      ],
+      "subsections": [
+        "Turn two coordinates into the next point",
+        "Follow the two live registers",
+        "Release workspace; keep track of its phase",
+        "Two randomizations, two purposes",
+        "Where this saving stops"
+      ],
+      "removed_editorial_instructions": [
+        "Specify the point-addition map and affine formulas that the register schedule must implement.",
+        "Explain why computing the slope requires a modular inverse, and why a recorded gcd can apply that inverse.",
+        "Reuse the two coordinate registers by changing their meaning at each step, rather than retaining every intermediate result.",
+        "Release table coordinates before expensive arithmetic, paying for reloads and phase corrections instead of keeping them live.",
+        "Explain how measurement, reset and feedforward jointly free qubits without destroying address coherence.",
+        "Use offsets to avoid identity table entries and to support failure bounds; these randomizations serve different purposes.",
+        "State the resource gain together with the exceptional inputs and approximation failures that limit its guarantee."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "binary-gcd",
+      "sourcePages": [
+        12
+      ],
+      "subsections": [
+        "Why point addition needs a gcd computation",
+        "Change what is stored, then simplify the gate",
+        "An odd register exposes the next parity",
+        "One adder supplies both signs",
+        "The prime-modulus boundary still matters",
+        "Exact identities; finite arithmetic windows"
+      ],
+      "removed_editorial_instructions": [
+        "Connect this optimization to point addition: the slope needs division, and gcd reductions provide the operations that apply an inverse.",
+        "Identify the expensive operation in the inherited gcd step before changing its stored variables.",
+        "Derive the paper’s shifted representation, which makes parity updates simple and both arithmetic branches use one signed adder.",
+        "Explain the gate saving: controlling the sign of an addition can cost less than controlling whether it happens at all.",
+        "Check that cheap bitwise complements implement the intended modular operation despite the special prime’s boundary cases.",
+        "Separate exact algebraic identities from truncated implementations whose rare failures must be included in the resource estimate."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "modular-squaring",
+      "sourcePages": [
+        12,
+        13
+      ],
+      "subsections": [
+        "Subtract a square without destroying its input",
+        "Use the triangle of distinct bit products",
+        "Make every step add or subtract",
+        "Let the active window shrink",
+        "Exploit the shape of the modulus"
+      ],
+      "removed_editorial_instructions": [
+        "Define the reversible square-subtract operation so the circuit’s output and preserved input are unambiguous.",
+        "Avoid computing both copies of each off-diagonal bit product when the two multiplication operands are identical.",
+        "Rewrite the square so each step selects an addition or subtraction, enabling the cheaper inherited adder technique.",
+        "Count the saving from shorter active additions rather than treating every step as a full-width operation.",
+        "Combine smaller squares with the special modulus to avoid a general full-width modular reduction."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "appendix-algorithms",
+      "sourcePages": [
+        45,
+        46,
+        47
+      ],
+      "subsections": [
+        "The appendix supplies the arithmetic contracts",
+        "A short update can miss a long carry",
+        "Fold overflow back into low bits",
+        "A correct integer can still have the wrong sign",
+        "Shifts need their overflow correction too",
+        "Assemble the bound"
+      ],
+      "removed_editorial_instructions": [
+        "Identify the exact input/output contracts before analyzing the approximations used to implement them.",
+        "Show how limiting the carry range saves work but can change the arithmetic result.",
+        "Use the special prime to replace large overflow terms with smaller low-bit corrections.",
+        "Explain why measured carry cleanup needs phase repair even when the integer output is correct.",
+        "Account for modular overflow when implementing multiplication by powers of two through shifts.",
+        "Combine the component reductions into the square-subtract operation and its error accounting."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "schrottenloher-arithmetic",
+      "sourcePages": [
+        11,
+        12,
+        55
+      ],
+      "subsections": [
+        "Store the computation instead of its inverse",
+        "Each gcd step has a small reversible record",
+        "Apply the history to another vector",
+        "Three decisions fit in five qubits",
+        "The shrinking values pay for the growing history",
+        "Where approximation enters"
+      ],
+      "removed_editorial_instructions": [
+        "Explain how storing reduction history avoids a separate inverse and supports in-place arithmetic.",
+        "Specify the small set of branch decisions needed to reverse an integer gcd step.",
+        "Use the same recorded operations on another operand to perform multiplication or division.",
+        "Compress valid history patterns rather than allocate a full independent bit for every decision.",
+        "Reuse space released by shrinking remainders to hold the growing record.",
+        "Identify the deliberate approximations that save gates and therefore require a failure budget."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "temporary-and-adders",
+      "sourcePages": [
+        12,
+        13,
+        15,
+        16
+      ],
+      "subsections": [
+        "Pay for the AND once",
+        "The four-T computation",
+        "Erase information without erasing coherence",
+        "One nonlinear computation per carry",
+        "The cost moves into workspace and measurements"
+      ],
+      "removed_editorial_instructions": [
+        "Define the clean-ancilla AND map before discussing its computation and measurement-based inverse.",
+        "Give the actual non-Clifford construction rather than treating the AND as a free operation.",
+        "Prove how the measured outcome determines the phase correction needed to restore coherence.",
+        "Use temporary ANDs for carry generation so each nonlinear carry is paid for only once.",
+        "State the workspace and measurement costs that accompany the lower non-Clifford gate count."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "dialog-multiplication",
+      "sourcePages": [
+        11,
+        12,
+        45
+      ],
+      "subsections": [
+        "The task: divide without storing an inverse",
+        "What the record contains",
+        "Three blocks, with explicit contracts",
+        "Open “Apply record”",
+        "Why these steps produce the quotient",
+        "One record, followed all the way through",
+        "Why the quantum record must be cleared",
+        "What makes this a space-saving representation"
+      ],
+      "removed_editorial_instructions": [
+        "Define modular division and explain why applying an inverse directly can save a temporary field register.",
+        "Specify the branch decisions that form the record, so replay is an explicit reversible operation rather than an undefined instruction.",
+        "Show the complete division circuit and define what each block consumes, preserves and clears.",
+        "Expand replay into controlled swaps, subtraction and modular halving using decisions already computed from the denominator.",
+        "Prove that the recorded linear transformations send the numerator to its quotient; the matrices are proof notation, not stored data.",
+        "Check the complete mechanism on one small division, including every intermediate register value.",
+        "Remove the denominator-dependent history coherently so it cannot retain information about the quantum input.",
+        "Explain the actual storage saving: history occupies space freed by shrinking remainders, beyond merely avoiding an explicit inverse."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "litinski-add-subtract",
+      "sourcePages": [
+        11,
+        12,
+        13
+      ],
+      "subsections": [
+        "Put the control on complements instead of carries",
+        "The control choice changes the non-Clifford count",
+        "Recover an ordinary product from signed additions",
+        "Unsigned carry-out introduces a second correction",
+        "The resulting multiplier, and what IonQ imports"
+      ],
+      "removed_editorial_instructions": [
+        "Move the control to bitwise complements so the carry circuit can remain unconditional.",
+        "Compare the nonlinear costs of selecting a sign and selecting whether an addition occurs.",
+        "Recover ordinary multiplication from a sequence of signed additions plus a known correction.",
+        "Track finite-register offsets so the signed algebra remains correct in an unsigned implementation.",
+        "State the resulting multiplication cost and distinguish the imported technique from IonQ’s adaptations."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "karatsuba-squaring",
+      "sourcePages": [
+        11,
+        12,
+        13,
+        47
+      ],
+      "subsections": [
+        "Recover two cross terms from one product",
+        "One split can be better than full recursion",
+        "The product of sums becomes a square",
+        "Fold the high square through the modulus",
+        "Reuse scratch only after reversing the square",
+        "Count the leaves separately from their accumulation"
+      ],
+      "removed_editorial_instructions": [
+        "Derive the three-product identity that removes one of the four half-size products.",
+        "Explain why arithmetic overhead and workspace can make a single split preferable to full recursion.",
+        "Specialize the identity to squaring so its leaves are smaller squares rather than general products.",
+        "Exploit the modulus to fold the high part into cheaper low-width corrections.",
+        "Clear each temporary square before reusing its storage, preserving the coherent input.",
+        "Count both the smaller squares and the arithmetic needed to accumulate and reduce them."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "audit",
+      "sourcePages": [],
+      "subsections": [
+        "Section-by-section context audit",
+        "Three kinds of evidence",
+        "Checks with mathematical consequences",
+        "Details that change interpretation",
+        "Complete lesson inventory",
+        "Diagrams and data",
+        "Scope of verification"
+      ],
+      "removed_editorial_instructions": [],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "compiler-overview",
+      "sourcePages": [
+        14
+      ],
+      "subsections": [
+        "Turn arithmetic into a timed experiment",
+        "Keep the interface fixed; change the implementation",
+        "Structure carries scheduling information",
+        "A frame update changes the next measurement",
+        "What “end-to-end” includes"
+      ],
+      "removed_editorial_instructions": [
+        "Identify the compiler’s output: a legal measurement schedule, rather than only a list of arithmetic gates.",
+        "Separate what an operation must compute from the circuit chosen to implement it, enabling safe substitutions.",
+        "Use a small contract to show which input, output and phase properties an implementation must preserve.",
+        "Retain arithmetic hierarchy so placement and scheduling can exploit structure instead of treating every gate independently.",
+        "Explain how deferred Clifford operations change later measurement questions rather than disappearing from the computation.",
+        "Clarify which preparation, routing and correction operations must be included before a schedule is called end-to-end."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "constraints-scheduling",
+      "sourcePages": [
+        14,
+        15
+      ],
+      "subsections": [
+        "A layer must pass two tests",
+        "Earlier measurement, changed observable",
+        "Algorithm 1: scan backward, stop at a real obstacle",
+        "Commutation becomes a parity test"
+      ],
+      "removed_editorial_instructions": [
+        "Distinguish algebraic permission to overlap operations from the availability of the physical resources they require.",
+        "Derive how a measurement observable changes when moved across an earlier operation.",
+        "Allow early measurement when the unresolved correction only changes how its outcome is interpreted.",
+        "Identify a genuine dependency when the unresolved correction changes which observable must be measured.",
+        "Turn the commutation and resource conditions into a scheduling procedure that stops at an actual dependency.",
+        "Separate waiting for an unknown measurement basis from waiting for an occupied hardware resource.",
+        "Evaluate Pauli commutation efficiently through binary parity calculations used by the scheduler."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "integrated-routing",
+      "sourcePages": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "subsections": [
+        "Arrange qubits so corrections stay local",
+        "A move is a parity measurement plus cleanup",
+        "Use the disappearing carry as a routing opportunity",
+        "The same rule governs the whole window"
+      ],
+      "removed_editorial_instructions": [
+        "Choose layouts that keep correction operations local before attempting to overlap communication with arithmetic.",
+        "Implement movement through parity measurement and feedforward so it can fit the architecture’s measurement primitives.",
+        "Distribute one control across several locations without leaving uncontrolled phases when its copies are erased.",
+        "Use workspace released by the carry computation to move data while the adder is still executing.",
+        "Compare the routed depth with the arithmetic’s serial requirement to quantify how much movement was hidden.",
+        "Apply the same placement-and-overlap strategy to the other components of a complete point-addition window."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "verification",
+      "sourcePages": [
+        19,
+        20
+      ],
+      "subsections": [
+        "Correct arithmetic and executable scheduling are separate claims",
+        "Choose a contract that sees the possible bug",
+        "Prove the parent from its children",
+        "Testing cannot certify rare approximation failures",
+        "Check the failure mode with the right experiment",
+        "What remains necessary for independent reproduction"
+      ],
+      "removed_editorial_instructions": [
+        "Separate the claim that a circuit computes correctly from the claim that its measurement schedule can run on the device.",
+        "Choose a verification contract that includes the kind of error the circuit could introduce, including relative phases.",
+        "Demonstrate why correct basis values are insufficient when measurement-based cleanup leaves an input-dependent sign.",
+        "Use verified component contracts to justify replacing a parent operation with its implementation.",
+        "Explain why ordinary test samples cannot resolve the very small failure probabilities used in the analysis.",
+        "Match each scheduling or implementation risk to a check capable of detecting that failure.",
+        "Identify the additional implementation details needed to independently reproduce the compiled estimate."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "appendix-integrated-routing",
+      "sourcePages": [
+        57,
+        58
+      ],
+      "subsections": [
+        "Follow the register's meaning as well as its location",
+        "Two identities drive register reuse",
+        "1. Lookup, subtract, release",
+        "2. Divide while the workspace changes shape",
+        "3. Compute the new x coordinate indirectly",
+        "4. Reuse the large workspace for multiplication",
+        "5. Remove offsets and accumulated lookup phases",
+        "Closing the layout makes component costs composable"
+      ],
+      "removed_editorial_instructions": [
+        "Explain how to read a layout whose qubits change both position and arithmetic role during execution.",
+        "Derive the identities that allow the point-addition intermediates to overwrite existing coordinate registers.",
+        "Track the register contents so each routing stage has a definite mathematical meaning.",
+        "Load table coordinates only long enough to form differences, then release them for the next arithmetic stage.",
+        "Use the space freed by shrinking gcd operands to hold other data and the compressed branch record.",
+        "Compute the new coordinate indirectly so the square-subtract stage can reuse the existing registers.",
+        "Reuse the division workspace for multiplication instead of allocating another large arithmetic region.",
+        "Remove remaining coordinate offsets and measurement phases before returning to the window’s entry layout.",
+        "Show why restoring the layout lets separately compiled component costs compose without an uncounted relocation step."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "appendix-clifford-synthesis",
+      "sourcePages": [
+        59,
+        60
+      ],
+      "subsections": [
+        "The run configuration is part of the result",
+        "1. Lower until every leaf is legal",
+        "2. Retain repeated structure during lowering",
+        "3. Cache structure, remap local outcomes",
+        "4. Allocate states when timing is known",
+        "5. Store the long schedule compactly",
+        "6. Encode the placement insight explicitly"
+      ],
+      "removed_editorial_instructions": [
+        "State the configuration choices needed to determine a compiled schedule rather than treating compilation as a unique mapping.",
+        "Expand abstract operations until the remaining instructions are supported by the target architecture.",
+        "Retain repeated structure instead of eagerly duplicating the full circuit during every lowering stage.",
+        "Show why reversing a repeated operation also reverses its execution order.",
+        "Reuse compiled structure safely by giving copied measurements fresh local identities.",
+        "Assign factory outputs only when the schedule determines when each resource state is needed.",
+        "Represent a very long schedule compactly without changing its operations or dependencies.",
+        "Make placement choices explicit so arithmetic structure can guide routing rather than leaving it entirely to generic search."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "reference-table-lookup",
+      "sourcePages": [],
+      "subsections": [
+        "From a small LUT to the circuit IonQ uses",
+        "A copied address is an entangled control"
+      ],
+      "removed_editorial_instructions": [
+        "Build the lookup from defined small circuits before explaining IonQ’s routing and parallel schedule.",
+        "Compute one nonlinear selector and reuse it across an entire classical word and both address branches.",
+        "Extend the one-bit circuit recursively without repeating full address tests for every output bit.",
+        "Assemble a complete eight-entry lookup from the defined subcircuits and account for its temporary storage.",
+        "Overlap two controlled half-table traversals to keep shared output resources busy; the table’s logical contents remain unchanged.",
+        "Make wide writes compatible with code-block locality by relaying selectors and clearing their temporary copies.",
+        "Replace coherent inverse computation with measurement, reset and feedforward, while proving that all input coherence is restored.",
+        "Repair the generally nonlinear address phase left by measuring a coordinate word; this correction is not automatically a Pauli update.",
+        "Distribute or move a computational-basis control coherently, then erase the spare carrier with a simple phase correction."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "reference-beam-search-decoder",
+      "sourcePages": [
+        24,
+        25,
+        26,
+        64
+      ],
+      "subsections": [
+        "The decoder determines whether the code succeeds",
+        "Distinguish detector parity from logical parity",
+        "Belief propagation exchanges local evidence",
+        "Branch where evidence cancels",
+        "What enters IonQ's estimate"
+      ],
+      "removed_editorial_instructions": [
+        "Explain why code distance alone cannot determine the memory error rate without a decoder and noise model.",
+        "Define the decoding objective: satisfy observed checks while choosing the correct logical error class.",
+        "Show why two errors with the same syndrome need not have the same effect on stored information.",
+        "Use local message updates to estimate error likelihoods without searching every global pattern.",
+        "Explore several ambiguous branches when local evidence alone fails to identify a reliable correction.",
+        "Identify the actual decoder settings and the extrapolation separating simulated noise levels from the target device estimate."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "section-12e-eastinthillation",
+      "sourcePages": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "subsections": [
+        "XII E. Build a CCZ resource in two protection stages",
+        "E.1. Verify cheaply, then separate correlated outputs",
+        "E.2. Redundancy detects faults without revealing the controls",
+        "E.3. Rejection costs time; memory dominates error",
+        "E.4. Balance rotation precision against noisy T gates"
+      ],
+      "removed_editorial_instructions": [
+        "Explain why two protection stages are used to produce a CCZ resource rather than directly injecting raw noisy states.",
+        "Reject faults cheaply in a small code before paying for stronger protection, while controlling correlations between retained outputs.",
+        "Use redundant inputs to detect harmful faults without measuring the logical data needed for the CCZ state.",
+        "Suppress injection-readout mistakes through agreeing measurements, with extra time charged to the schedule.",
+        "Compute the expected readout time when acceptance depends on a sequence of stochastic outcomes.",
+        "Include both retries and storage exposure when converting an algebraic distillation protocol into a factory estimate.",
+        "Choose rotation precision by balancing approximation error against the errors in supplied magic states."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "appendix-e-resource-totals",
+      "sourcePages": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "subsections": [
+        "Appendix E. From compiled layers to a machine",
+        "E.1. Count the peak allocation",
+        "E.2. Multiply depth by the longest mean layer",
+        "E.3. Keep hardware failure separate from sampling success"
+      ],
+      "removed_editorial_instructions": [
+        "Connect the component counts to physical qubits, runtime and hardware failure without mixing their units.",
+        "Count simultaneously required code blocks, factories and reservoirs to obtain the peak device footprint.",
+        "Size reserves for a long run, where many small shortage risks can accumulate.",
+        "Convert measurement depth into expected elapsed time using the modeled duration of a layer.",
+        "Keep hardware survival separate from ideal algorithmic success and deliberate arithmetic approximation."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "appendix-g-q66-representatives",
+      "sourcePages": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "subsections": [
+        "Appendix G. Make a logical measurement physically schedulable",
+        "The binary certificate",
+        "Parallelism requires more than commutation",
+        "Which measurements must fit a cat?",
+        "Change the questions, recover the same answers",
+        "What the certificates establish",
+        "Exact records for reuse"
+      ],
+      "removed_editorial_instructions": [
+        "Explain why an abstract logical operator needs a concrete physical support before it can be scheduled.",
+        "Specify the binary code data against which the claimed logical operators can be checked.",
+        "Show why commuting operators may still compete for the same physical qubits.",
+        "Check whether each physical support fits the available cat-measurement resource.",
+        "Replace measured generators with equivalent products to improve their physical compatibility while retaining recoverable outcomes.",
+        "State exactly which algebraic and support properties the certificates verify.",
+        "Provide the full representatives so the support claims can be checked or reused independently."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "eastin-toffoli-distillation",
+      "sourcePages": [],
+      "subsections": [
+        "Eight inputs, one directly prepared Toffoli resource",
+        "The cheaper gate is exact on the input we need",
+        "Check redundancy without learning ab",
+        "Why the single faults are visible",
+        "Acceptance and conditional error are different quantities",
+        "The algebraic yield is only one factory cost"
+      ],
+      "removed_editorial_instructions": [
+        "Define the resource transformation and why distilling the required three-qubit gate is useful for the arithmetic workload.",
+        "Use a cheaper gate that is correct on the protocol’s specific input rather than demanding the same action on every state.",
+        "Measure a redundancy check that detects faults without revealing the logical product being computed.",
+        "Track how the allowed single-input faults trigger rejection under the assumed noise model.",
+        "Distinguish the chance of acceptance from the error probability conditioned on acceptance.",
+        "Explain why algebraic yield alone does not determine the footprint or latency of a physical factory."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "campbell-howard-synthillation",
+      "sourcePages": [],
+      "subsections": [
+        "Synthesize the gate while checking its inputs",
+        "Replace the cubic phase by parity phases",
+        "Add a check bit that leaves the desired phase unchanged",
+        "The same matrix identifies rejected and harmful faults",
+        "The reusable criterion"
+      ],
+      "removed_editorial_instructions": [
+        "Explain the benefit of designing the target gate and its input-error checks together.",
+        "Express the CCZ phase through parities so a matrix can describe its synthesis from single-qubit phase resources.",
+        "Introduce redundancy that detects faults while preserving the intended logical phase.",
+        "Use the same matrix to classify which error patterns are rejected and which can corrupt an accepted output.",
+        "Extract the conditions that make the construction reusable beyond this particular CCZ example."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "dasu-c6-zero-level",
+      "sourcePages": [],
+      "subsections": [
+        "Verify before paying for a large code",
+        "The check sees one bad eigenvalue, but misses two",
+        "The encoder prevents a single fault from exploiting that blind spot",
+        "Acceptance can repair rather than reject an error",
+        "Protect the check itself",
+        "Keep the experiment and the new simulation separate"
+      ],
+      "removed_editorial_instructions": [
+        "Reduce the cost of discarding bad states by checking them before they enter a larger code.",
+        "Identify which eigenvalue errors the check detects and which combinations it cannot distinguish.",
+        "Choose an encoder that prevents a single preparation fault from becoming an undetected harmful combination.",
+        "Explain how a successful projection can remove some erroneous components rather than merely reject them.",
+        "Detect dangerous faults introduced by the verification measurement itself.",
+        "Separate evidence from the source experiment from the simulation assumptions used in IonQ’s factory estimate."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "goto-state-encoding",
+      "sourcePages": [],
+      "subsections": [
+        "Encode, verify, then raise the code level",
+        "Follow the XORs through the encoder",
+        "A correct encoding map does not remove faults",
+        "A Bell ancilla checks both phase and dangerous propagation",
+        "Teleport into an already protected output",
+        "What this inheritance establishes"
+      ],
+      "removed_editorial_instructions": [
+        "Separate state encoding, fault verification and transfer to a stronger code before following their circuits.",
+        "Verify the encoder’s intended state by tracing its CNOT transformations explicitly.",
+        "Explain why implementing an encoding map correctly does not establish fault tolerance of its preparation circuit.",
+        "Use a Bell-state check to detect phase errors and faults that could spread dangerously.",
+        "Transfer the state into an already protected output rather than expose that output to the original preparation circuit.",
+        "State which circuit ingredients are inherited and which extra assumptions the integrated factory requires."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "reference-knill-c6",
+      "sourcePages": [],
+      "subsections": [
+        "A small detector inside the factory",
+        "Fix the qubit convention first",
+        "Detecting one error is cheaper than identifying it",
+        "Choose a logical basis; retain its signs",
+        "A product-H check comes for free from the symmetry",
+        "Three codes, three distinct jobs"
+      ],
+      "removed_editorial_instructions": [
+        "Explain why a small detecting code is useful before expensive higher-level protection.",
+        "Fix the qubit ordering and stabilizer convention so later operator identities are well defined.",
+        "Show how detecting a single fault requires less information than identifying and correcting its location.",
+        "Define the logical operators and their signs before using them in the factory’s checks.",
+        "Use the code symmetry to implement the paired logical Hadamard check transversally.",
+        "Distinguish the roles of the small detector, the factory code and the main memory code."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "index",
+      "sourcePages": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "subsections": [
+        "The interesting question",
+        "Five ideas worth following",
+        "Where the time goes",
+        "Choose a route"
+      ],
+      "removed_editorial_instructions": [],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "introduction",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "subsections": [
+        "Two moduli, two jobs",
+        "What a complete estimate connects",
+        "The missing unit is a measurement layer",
+        "The device being estimated"
+      ],
+      "removed_editorial_instructions": [
+        "Distinguish the field used for coordinates from the group order used for the secret key.",
+        "Identify the chain of claims needed to turn a logical algorithm into a physical resource estimate.",
+        "Explain why Toffoli count alone cannot determine runtime when measurements and feedforward set the serial clock.",
+        "State which proposed device and workload the reported numbers describe."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "overview",
+      "sourcePages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "subsections": [
+        "Match the machine to a serial circuit",
+        "Supply is only half the timing problem",
+        "Count capacity and workspace separately",
+        "Approximation is a resource",
+        "The repeated unit",
+        "The final probability"
+      ],
+      "removed_editorial_instructions": [
+        "Identify the serial arithmetic bottleneck that the architecture must serve efficiently.",
+        "Reduce latency by matching both resource-state supply and gate injection to the computation’s dependencies.",
+        "Distinguish stored logical data from temporary arithmetic space when explaining the qubit budget.",
+        "Spend a bounded part of success probability to reduce the cost of exact arithmetic.",
+        "Identify the repeated point-addition window whose component costs dominate the total schedule.",
+        "Explain why two different classical-recovery assumptions produce different end-to-end success estimates."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "conclusion",
+      "sourcePages": [
+        41
+      ],
+      "subsections": [
+        "What carries beyond this estimate",
+        "What would most change the conclusion?",
+        "Where further optimization could matter",
+        "Per attempt is not time to success"
+      ],
+      "removed_editorial_instructions": [
+        "Identify which methods and conclusions remain useful beyond the particular headline estimate.",
+        "State the assumptions whose failure or revision would most affect the claimed resources.",
+        "Identify possible future savings without presenting them as results already achieved by this paper.",
+        "Translate per-attempt cost and success probability into the cost of repeated attempts."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "notation",
+      "sourcePages": [],
+      "subsections": [
+        "Symbols and their roles",
+        "Circuit and measurement conventions"
+      ],
+      "removed_editorial_instructions": [],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    },
+    {
+      "slug": "reference-mixed-fallback",
+      "sourcePages": [
+        40,
+        41
+      ],
+      "subsections": [
+        "Shorter approximate rotations save supplied T states",
+        "1. Pay for the long correction only on failure",
+        "2. Cancel opposite coherent errors",
+        "3. Use the wider angle tolerance to find shorter sequences",
+        "4. Balance approximation against faulty supplied states"
+      ],
+      "removed_editorial_instructions": [
+        "Explain why approximate rotations should be optimized for total supplied-state cost rather than sequence length alone.",
+        "Pay for a long corrective rotation only on the branch that needs it.",
+        "Mix approximations with opposite coherent errors to reduce the net channel error.",
+        "Use the allowed approximation tolerance to search for shorter implementable sequences.",
+        "Balance synthesis error against accumulated magic-state faults to choose a useful precision."
+      ],
+      "revision": "Rewrote the opening around the mechanism; removed repeated purpose instructions while retaining appended definitions; escaped HTML-sensitive mathematical comparisons; preserved section anchors, derivations, circuits, and sources."
+    }
+  ]
+}

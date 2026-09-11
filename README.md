@@ -22,6 +22,16 @@ Open http://localhost:8000. For static hosting, publish `website/dist`.
 
 Canonical lesson content is in `website/content/*.json`; diagrams and assets are included. See `website/README.md` for the source layout and checks.
 
-Imported from the published Sites version 10, source commit `3e998ec43e19f5e23ab1a38d0b382f30722c3d83`. This repository is a snapshot; automatic deployment is not configured.
+Imported from the published Sites version 10, source commit `3e998ec43e19f5e23ab1a38d0b382f30722c3d83`. The public revision is hosted at https://projects.yifanfrankzhang.com/ionq-ecdlp/ through the scoped Cloudflare Worker in `wrangler.jsonc`. Deployment is manual.
 
 The notes include attributed figures from the source paper and vendored KaTeX. Original authors retain their respective rights; see source citations and bundled license files.
+
+## Public deployment
+
+```sh
+SITE_BASE_PATH=/ionq-ecdlp python3 website/build.py
+SITE_BASE_PATH=/ionq-ecdlp python3 website/scripts/audit_site.py website/dist
+wrangler deploy
+```
+
+See `website/PUBLIC-REVISION.md` and `website/data/blog-revision.json` for the current audit and section-level edits.

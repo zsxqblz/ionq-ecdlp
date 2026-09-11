@@ -1,10 +1,10 @@
 # Elliptic-curve discrete-logarithm teaching notes
 
-This is a static, multipage companion to the September 3, 2026 IonQ paper by Häner et al. All authored website content, scripts, styles, data, and assets are under this directory. Hosting identity is kept in the parent `.openai/hosting.json`.
+This is a static, multipage companion to the September 3, 2026 IonQ paper by Häner et al. All authored website content, scripts, styles, data, and assets are under this directory. Public hosting is configured in the parent `wrangler.jsonc`.
 
 The canonical lesson content is `content/*.json`. Each lesson has a slug, title, group, order, source pages, HTML body, and reference list. Mathematics uses only `\(...\)` and `\[...\]`. The local KaTeX distribution renders it to HTML and MathML at build time; no external runtime script or font service is required.
 
-Run `python build.py` to generate `dist/`, then `python scripts/audit_site.py dist` and `node --check site.js`. The build fails on malformed TeX. The audit checks every internal page, asset, heading link, duplicate ID, image alternative, and raw math fragment. It is a static-output audit, not browser automation.
+For public hosting set `SITE_BASE_PATH=/ionq-ecdlp` for both build and audit. Run `python build.py` to generate `dist/`, then `python scripts/audit_site.py dist` and `node --check site.js`. The build fails on malformed TeX. The audit checks every internal page, asset, heading link, duplicate ID, image alternative, and raw math fragment. It is a static-output audit, not browser automation.
 
 `content/*.json` is the only lesson source. Obsolete one-off authoring helpers have been removed so they cannot overwrite audited revisions. `data/runtime.json` contains the disclosed layer counts and the more precise duration from Appendix E23. The website's chart reads this JSON locally. `data/evidence-ledger.json` records source locations and claim status.
 

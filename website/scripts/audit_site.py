@@ -1,7 +1,8 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
-import json,re,sys,collections
+import json,re,sys,collections,os
+base=os.environ.get("SITE_BASE_PATH", "").rstrip("/")
 root=Path(sys.argv[1]).resolve();errors=[];warnings=[];documents={};counts=collections.Counter()
 class Doc(HTMLParser):
  def __init__(self):super().__init__(convert_charrefs=True);self.ids=[];self.refs=[];self.svg=0;self.math=0;self.text=[];self.ignored=0;self.svg_depth=0;self.svg_title=False
@@ -33,7 +34,9 @@ for file,d in documents.items():
  for tag,key,ref in d.refs:
   u=urlsplit(ref)
   if u.scheme or u.netloc or ref.startswith('data:'):continue
-  dest=root/unquote(u.path).lstrip('/') if u.path.startswith('/') else file.parent/unquote(u.path)
+  path=unquote(u.path)
+  if base and (path==base or path.startswith(base+'/')):path=path[len(base):] or '/'
+  dest=root/path.lstrip('/') if path.startswith('/') else file.parent/path
   if not u.path:dest=file
   if dest.is_dir():dest=dest/'index.html'
   if not dest.exists():errors.append((d.file,'missing internal target',ref));continue
