@@ -1,0 +1,1365 @@
+{
+  "description": "Exact 190 representative records transcribed in version 1 from Appendix G of the IonQ resource estimate. Physical qubit order runs 0\u201365 from left to right. Overall phases are not encoded by these strings.",
+  "families": [
+    {
+      "source_table": "Table XV: Y-rotation layers",
+      "records": [
+        {
+          "class": "0",
+          "target": "L3/Y0",
+          "logical": "YIII",
+          "weight": "16",
+          "physical_pauli": "IYIYYIIZIIIIIIIYIIIIIIIXXIIIIIIIIIZYIIIIIYIIIIZZXZIIIIIIIZIIIIIIYI"
+        },
+        {
+          "class": "0",
+          "target": "L2/Y2",
+          "logical": "IIYI",
+          "weight": "15",
+          "physical_pauli": "XIIIIYIIIIXXIIIIIIIIZYZIIIIIXIIIIXIIZZYIIIIIIYIIIIIYIIIIIIIIIIIZII"
+        }
+      ]
+    },
+    {
+      "source_table": "Table XVI: Acceptance layer",
+      "records": [
+        {
+          "class": "0",
+          "target": "acceptance",
+          "logical": "ZIII",
+          "weight": "11",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIIZIIIIZIIIIIZIIIIIZIIIIIIZZIIIIIIIZIIZIZIIIZIZII"
+        },
+        {
+          "class": "1",
+          "target": "acceptance",
+          "logical": "XIXI",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIXIIXXIIXXIIIXIIIIIIIIIIIIIIIIIIIIXIIIIXXIIIXIIII"
+        },
+        {
+          "class": "2",
+          "target": "acceptance",
+          "logical": "YIYI",
+          "weight": "14",
+          "physical_pauli": "IIIIIIIIIIIXIIIIYZIIIIIIZIIYYIIZIIIIIIIIIIIIXIIYYIIXIIIIIIXYIIIIZI"
+        },
+        {
+          "class": "3",
+          "target": "acceptance",
+          "logical": "IIZI",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIIIIZIIIIIIIIIZIIIIIIIZIIIIIIZZIIIIZZIZIIIIIIZZII"
+        },
+        {
+          "class": "4",
+          "target": "acceptance",
+          "logical": "ZZII",
+          "weight": "11",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIZIZIIIIZIIIZIIZIIZIIIIIIZZIIIIIIIIIIIIIIIZIZIIIZ"
+        },
+        {
+          "class": "5",
+          "target": "acceptance",
+          "logical": "XZXI",
+          "weight": "15",
+          "physical_pauli": "IXIIIIIIZYIIZIYIIIIIIIIIIIIIIIIYIIIXYYIIYIIIIXZIIIIIIIIZIIIIIIIZXI"
+        },
+        {
+          "class": "6",
+          "target": "acceptance",
+          "logical": "YZYI",
+          "weight": "16",
+          "physical_pauli": "IIIIIIIIXIIIIXIIIIIIZIIIYYIIIIIIZIIIIZIIIXIIYYIIXIIIIZIYYIZIIIIIIZ"
+        },
+        {
+          "class": "7",
+          "target": "acceptance",
+          "logical": "IZZI",
+          "weight": "11",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIIIIZIIIIZIIIIIZIIIIIZIIIIIIZZIIIIIIIZIIZIZIIIZIZ"
+        },
+        {
+          "class": "8",
+          "target": "acceptance",
+          "logical": "ZIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIIIIZIIIIIZIIIIIIZIIIIZIIIIZIIIIIIZIIIIIIIIIZZIIIIZIIIIZII"
+        },
+        {
+          "class": "9",
+          "target": "acceptance",
+          "logical": "XIXZ",
+          "weight": "15",
+          "physical_pauli": "IIIIXIIIIIIIZYYXIIIIIIIYZIIIIIIIYIIXXZIXIIIZIIIIIIIIIIYIIIIIIIIIIY"
+        },
+        {
+          "class": "10",
+          "target": "acceptance",
+          "logical": "YIYZ",
+          "weight": "16",
+          "physical_pauli": "IYIZIIIIZXIIIIYIIIIIIIIIZIIIIIIYIIZXYXIIXZIIIYZIIIIIIIIIIIIIIIIIYI"
+        },
+        {
+          "class": "11",
+          "target": "acceptance",
+          "logical": "IIZZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIIIZIIIIIIIIIZIIIIIIIZIIIIIIZZIIIIZZIZIIIIIIZZIII"
+        },
+        {
+          "class": "12",
+          "target": "acceptance",
+          "logical": "ZZIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIIIIIZIIIIIZIIIIIIZIIIIZIIIIZIIIIIIZIIIIIIIIIZZIIIIZIIIIZI"
+        },
+        {
+          "class": "13",
+          "target": "acceptance",
+          "logical": "XZXZ",
+          "weight": "14",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIXIYIIIIIYIZZZIYIIIIIIIIIIIIIIIIIIYIXXXIYIIIIIYIZ"
+        },
+        {
+          "class": "14",
+          "target": "acceptance",
+          "logical": "YZYZ",
+          "weight": "14",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIIIIIIIXZYIYYIYXIIIIIIIIIIIIIIIIIIIIIIIZYIYYIYXZI"
+        },
+        {
+          "class": "15",
+          "target": "acceptance",
+          "logical": "IZZZ",
+          "weight": "11",
+          "physical_pauli": "IIIIIIIIIIIIIIIIZIZIIIIZIIIZIIZIIZIIIIIIZZIIIIIIIIIIIIIIIZIZIIIZII"
+        }
+      ]
+    },
+    {
+      "source_table": "Table XVII: CCZ injection layer",
+      "records": [
+        {
+          "class": "0",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "15",
+          "physical_pauli": "IIZZIIZIIIIIIIIIIZIIIIIZZIZZIIZIIIZIIIIZZIIIIIIZIIIIIIIZIIIIIIIIZI"
+        },
+        {
+          "class": "0",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "11",
+          "physical_pauli": "IZIIZIIZIIZIIZIIZIIZIIZIIZIIZIIZIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "0",
+          "target": "MZ2",
+          "logical": "ZIII",
+          "weight": "12",
+          "physical_pauli": "ZIIIIIIIZIIZIIIIIIIIZIIIIIIIIIIIIIIIIIZIIZZIIZIIIIZIIZIIIZIIIIIIIZ"
+        },
+        {
+          "class": "1",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIZIZZIIIIIIIZIZZZIIIIIIIIIIZIIIIIIIIIIIZIIIIIIIIIIZIIIIIIIIIIII"
+        },
+        {
+          "class": "1",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIIIIIIZIIIIIZIIIIIIZIIIIZIIIIZIIIIIIZIIIIIIIIIZZIIIIZIIIIZ"
+        },
+        {
+          "class": "1",
+          "target": "MZ2",
+          "logical": "XIXI",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIIXIIXIIIIIIIXIIIIXIIIIIIIIIIIIIIIIXIIIXXXIIXIIIIXIIIIIIII"
+        },
+        {
+          "class": "2",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIIIIIIZIIIIIIZIIIIIZIIIZIIIIIIZZIIIIIIIZIIIIIIIIIIZZIZIIII"
+        },
+        {
+          "class": "2",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "15",
+          "physical_pauli": "IIIIIZIIZIIIZIIIIZZIZIZIZZIIZIZIIIIIIZIIIIIIZIIIIIZIIIIIIIIIIIIIZI"
+        },
+        {
+          "class": "2",
+          "target": "MZ2",
+          "logical": "YIYI",
+          "weight": "15",
+          "physical_pauli": "XIYIYIXXIIIZIZIYIIIIIIIIIIIIIIIIIYIYXIIIIZIIIZYIZIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "3",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIZIZZZIIIIIIIIIIZIIIIIIZIZZIZIIIIIIIIIIZIIIIIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "3",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "10",
+          "physical_pauli": "IIIIIZIIIIIZIIIIIIZIIIIZIIIIIIIIIIIZIIIIIIIIIZZIIIIZIIIIZIIIIZIIII"
+        },
+        {
+          "class": "3",
+          "target": "MZ2",
+          "logical": "IIZI",
+          "weight": "10",
+          "physical_pauli": "ZZIIIIIIIIIIIIIIIZIIIIIIIIIIIIIIZIIIIIIIIIZIIIIIZZZIIIIIIZIIIIIZII"
+        },
+        {
+          "class": "4",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "ZIIIZIIIIIIIIIIIIIIIZIIIIIIZIIIIIIZIIIIIIIIIZZIIIIIIIZIIIIIIIIIIZZ"
+        },
+        {
+          "class": "4",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "10",
+          "physical_pauli": "IIZIIIIIIZIIIIZIIIIIIIIIIIIIIZIIIIIIZZIIIIZIIIIZIIIIZIIIIIIZIIIIII"
+        },
+        {
+          "class": "4",
+          "target": "MZ2",
+          "logical": "ZZII",
+          "weight": "11",
+          "physical_pauli": "IIIIIZIZIIZIIIIIIIIIIIIIZIIIIIIZIIIIIIIZIZIZIIIIZZIIIIIIIZIIIIIIII"
+        },
+        {
+          "class": "5",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIZIIIIIIZIZZIIIIIIIZIZZZIIIIIIIIIIIIIIIIIIIIIIZIIIIIIIIIIZ"
+        },
+        {
+          "class": "5",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "10",
+          "physical_pauli": "ZIIIIZIIIIIIIIIIIIIIZIIIIIZIIIIIIZIIIIZIIIIZIIIIIIZIIIIIIIIIZZIIII"
+        },
+        {
+          "class": "5",
+          "target": "MZ2",
+          "logical": "XZXI",
+          "weight": "15",
+          "physical_pauli": "IIZYIIZIYIIIIIIIIIIIIIIIIYIIXIIIIIYIIIIXZIIIIIIIIZIIIIIIIZXIIIXYYI"
+        },
+        {
+          "class": "6",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIZIIIIIIZIZZIIIIIIIZIZZZIIIIIIIIIIIIIIIIIIIIIIZIIIIIIIIIIZ"
+        },
+        {
+          "class": "6",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "10",
+          "physical_pauli": "ZIIIIZIIIIIIIIIIIIIIZIIIIIZIIIIIIZIIIIZIIIIZIIIIIIZIIIIIIIIIZZIIII"
+        },
+        {
+          "class": "6",
+          "target": "MZ2",
+          "logical": "YZYI",
+          "weight": "16",
+          "physical_pauli": "IIIIIIXZYIYIYYZIIIIIIXIIIIIIIIIIIIIIZIIYIYXIIIIIIIIIXIIZIIIIIIZZII"
+        },
+        {
+          "class": "7",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "13",
+          "physical_pauli": "IIIZIIZIIIIIIIIIIIIIZZIZIIZIIIIIZZIIIIIZIIIZIIIIIIZIZIZIIIIIIIIIII"
+        },
+        {
+          "class": "7",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "12",
+          "physical_pauli": "IZIIIIIIZIZZZIIZIZIIIIIIIIIZIIIIIIZZIIIIIZIIIIIIIZIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "7",
+          "target": "MZ2",
+          "logical": "IZZI",
+          "weight": "13",
+          "physical_pauli": "IIIIZIIIIIIIIIIIIIZZIIZIIZIIZIIZIIIIIIIIIIZIZZIIIIIZIIIIIZIIIIIIZI"
+        },
+        {
+          "class": "8",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "11",
+          "physical_pauli": "ZIIIIIIIIIIIIIIIIIZIIIIIIIIZIIIIIIZZIIIIIIIZIIIIIZZZIIIIIIIIIIIIZZ"
+        },
+        {
+          "class": "8",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "11",
+          "physical_pauli": "IZIIZIIZIIZIIZIIZIIZIIZIIZIIZIIZIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "8",
+          "target": "MZ2",
+          "logical": "ZIIZ",
+          "weight": "11",
+          "physical_pauli": "IIZIIZIIZIIZIIZIIZIIZIIZIIZIIZIIZIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "9",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIIIIIIIIZIIIIIIIIIZIIIIIIIZIIIIIIZZIIIIZZIZIIIIIIZZIIIIIII"
+        },
+        {
+          "class": "9",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "12",
+          "physical_pauli": "IIIIIIIIIIIIIZZIIIIIIZZZZIIZIZIIIIIIIZIIIIIIIIIIIIIZIIZIIIIIIZIIII"
+        },
+        {
+          "class": "9",
+          "target": "MZ2",
+          "logical": "XIXZ",
+          "weight": "15",
+          "physical_pauli": "IYIXYIIIIIIIYIIIIIIIIIIIIIIIIIXIXYIIIIIIIIIYZZIIIIIIZIIIIIIZZIIXIY"
+        },
+        {
+          "class": "10",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIIIIIIIIZIIIIIIIIIZIIIIIIIZIIIIIIZZIIIIZZIZIIIIIIZZIIIIIII"
+        },
+        {
+          "class": "10",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "10",
+          "physical_pauli": "IIIIIZIIIIIZIIIIIIZIIIIZIIIIIIIIIIIZIIIIIIIIIZZIIIIZIIIIZIIIIZIIII"
+        },
+        {
+          "class": "10",
+          "target": "MZ2",
+          "logical": "YIYZ",
+          "weight": "16",
+          "physical_pauli": "YZIIYIIIIIIIZZYIIIIIIIYIZIIIIIZIZXIIXIXIIIIYXIIIIIIIIYIIIIIIIIIIII"
+        },
+        {
+          "class": "11",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "15",
+          "physical_pauli": "IIIIIZIIIIIZZIIZIIZIIZIIIIIZIZIIZIIZIIIIIIIZIZIIIIIIIZIZIIIIIIIIIZ"
+        },
+        {
+          "class": "11",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "11",
+          "physical_pauli": "IZIIZIIZIIZIIZIIZIIZIIZIIZIIZIIZIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "11",
+          "target": "MZ2",
+          "logical": "IIZZ",
+          "weight": "12",
+          "physical_pauli": "IIIIIIZIZIIIIIIIIIIIIIIIZIIIIIZIIIIIIZZZIIIIIIIIZZIIIIIIIZIIIZZIII"
+        },
+        {
+          "class": "12",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIZIZZZIIIIIIIIIIZIIIIIIZIZZIZIIIIIIIIIIZIIIIIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "12",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "10",
+          "physical_pauli": "IIIIIZIIIIIZIIIIIIZIIIIZIIIIIIIIIIIZIIIIIIIIIZZIIIIZIIIIZIIIIZIIII"
+        },
+        {
+          "class": "12",
+          "target": "MZ2",
+          "logical": "ZZIZ",
+          "weight": "10",
+          "physical_pauli": "IZIIIIIZIIIIIIZIIIIZIIIIIIIIIIIIIIIIIIIIIZZIIIIZIIIIZIIIIZIIIIIIZI"
+        },
+        {
+          "class": "13",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIZIIIIIZIIIZIIIIIIIIIIIIIIIZIIIIIIIIIIZZIZIIIIIIIIIZZIIIIIIIZ"
+        },
+        {
+          "class": "13",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "10",
+          "physical_pauli": "IIZIIIIIIZIIIIZIIIIIIIIIIIIIIZIIIIIIZZIIIIZIIIIZIIIIZIIIIIIZIIIIII"
+        },
+        {
+          "class": "13",
+          "target": "MZ2",
+          "logical": "XZXZ",
+          "weight": "15",
+          "physical_pauli": "XIIIIIIIIIIIIIIIIYIIIIYIXYZYIIIZIIIIIIIIIIIIIIIIZIXIIYXIIIXIIZIIYI"
+        },
+        {
+          "class": "14",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIZIIIIIIZIZZIIIIIIIZIZZZIIIIIIIIIIIIIIIIIIIIIIZIIIIIIIIIIZ"
+        },
+        {
+          "class": "14",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "10",
+          "physical_pauli": "ZIIIIZIIIIIIIIIIIIIIZIIIIIZIIIIIIZIIIIZIIIIZIIIIIIZIIIIIIIIIZZIIII"
+        },
+        {
+          "class": "14",
+          "target": "MZ2",
+          "logical": "YZYZ",
+          "weight": "14",
+          "physical_pauli": "IIIIIIYIYIYYIXXZIIIIIIIIIIIIIIIIIIIIIZIYIYYIXYIIZIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "15",
+          "target": "MZ0",
+          "logical": "IIIZ",
+          "weight": "10",
+          "physical_pauli": "IIIIIIZIZZZIIIIIIIIIIZIIIIIIZIZZIZIIIIIIIIIIZIIIIIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "15",
+          "target": "MZ1",
+          "logical": "IZII",
+          "weight": "10",
+          "physical_pauli": "IIIIIZIIIIIIZIIIIZIIIIIIIIIIIIIIZIIIIIIZZIIIIZIIIIZIIIIZIIIIIIZIII"
+        },
+        {
+          "class": "15",
+          "target": "MZ2",
+          "logical": "IZZZ",
+          "weight": "11",
+          "physical_pauli": "IIIIIIIIIIIIIZIZIIIIZIIIZIIZIIIIIIIIIZZIIIIIIIIIIIIIIIZIZIIIZIIZII"
+        }
+      ]
+    },
+    {
+      "source_table": "Table XVIII: Protected phase-fixup singleton",
+      "records": [
+        {
+          "class": "0",
+          "target": "S",
+          "logical": "IIXZ",
+          "weight": "15",
+          "physical_pauli": "IIIIIIIXIIIIIYIIXXIIIIIYIIIIIIIXIIIIIIZYIXIIYYIZIIIIIIZYIIIIIIIIZI"
+        },
+        {
+          "class": "1",
+          "target": "S",
+          "logical": "IXIZ",
+          "weight": "14",
+          "physical_pauli": "IIIIIIIIIZIXIIIIIXIIIIIIYYYIIIIIXIZIIIIIYYYIIIIIIZIIIIIZIXIIIIIIII"
+        },
+        {
+          "class": "2",
+          "target": "S",
+          "logical": "IZXI",
+          "weight": "15",
+          "physical_pauli": "YIIIIYIIIIXXIIIIIIIIIXIIIIZZYIIIIYIIIIYIIIIZIXIIIIZYIIIIIIZIIIIIII"
+        },
+        {
+          "class": "3",
+          "target": "S",
+          "logical": "IZXZ",
+          "weight": "15",
+          "physical_pauli": "IXZIIIIYIIYYZIIIZXIIIIIIIXIIIIIIIYIXIIYXIIIIIIZIIYIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "4",
+          "target": "S",
+          "logical": "XIYY",
+          "weight": "15",
+          "physical_pauli": "IIIIIIIIXIIIIIYIIXXIIIIIYIIIIIIIXIIIIIIZYIXIIYYIZIIIIIIZYIIIIIIIIZ"
+        },
+        {
+          "class": "5",
+          "target": "S",
+          "logical": "XIZI",
+          "weight": "14",
+          "physical_pauli": "IIIIIIIIZIXIIIIIXIIIIIIYYYIIIIIXIZIIIIIYYYIIIIIIZIIIIIZIXIIIIIIIII"
+        },
+        {
+          "class": "6",
+          "target": "S",
+          "logical": "XIZZ",
+          "weight": "16",
+          "physical_pauli": "IYYIIIIXIIYIYZZIIIIIIIIIIYIIIIIIZXIIIZIIXIXXIIIIYXIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "7",
+          "target": "S",
+          "logical": "XYYI",
+          "weight": "16",
+          "physical_pauli": "XIYIYIIZIZIIIIIZIZZYIIIIIIIXYIIIIXIIYIYIIIIIIYIIIIIIYIIIIIIIIIIIII"
+        },
+        {
+          "class": "8",
+          "target": "S",
+          "logical": "XYYZ",
+          "weight": "16",
+          "physical_pauli": "IIXZIIYIXIIIIIIIIIIIIIIIXYIZIIIIYZIYIIXZIIYIIIIXIYZIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "9",
+          "target": "S",
+          "logical": "XZYY",
+          "weight": "15",
+          "physical_pauli": "IIIYIZIZYYIIIIIIIIZXIIIIIIYIIIIXIZIIYIIIIIIYIIIIIYIZIIIIIIIIIIIIYI"
+        },
+        {
+          "class": "10",
+          "target": "S",
+          "logical": "XZZI",
+          "weight": "16",
+          "physical_pauli": "IXXIZIIIIYIYXIZIZYYIIIIIIXIIZIIIIYIIZIIIIZIYIIIIIIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "11",
+          "target": "S",
+          "logical": "XZZZ",
+          "weight": "16",
+          "physical_pauli": "IYIXXIIIIIZIIIIYIIIIIIIYXIIIIIZIZIIYIIIIIXIZIIZIYIIIIIIIIIIIIIIIYZ"
+        },
+        {
+          "class": "12",
+          "target": "S",
+          "logical": "YIXY",
+          "weight": "15",
+          "physical_pauli": "IIIIYIIIIYIIIIIIIXIIIIIIYXIIIIZIXIIIIYIIIIYIIIIYXXIIIIZIIIIIIIIIZZ"
+        },
+        {
+          "class": "13",
+          "target": "S",
+          "logical": "YYXI",
+          "weight": "16",
+          "physical_pauli": "XIYIYIIZIIIIIIIIIIIXIZIIIIIXYIIIIXIIYIYIZIIIIYZIIIIIXIZIIIIIIIIIII"
+        },
+        {
+          "class": "14",
+          "target": "S",
+          "logical": "YYXZ",
+          "weight": "15",
+          "physical_pauli": "IIIIIYIIXIYIIIIIIIIIIIIXIYIIIIIYIYXIXIYIIIIZIIIIYIIIIIIZXIIIIIIIIY"
+        },
+        {
+          "class": "15",
+          "target": "S",
+          "logical": "YZXY",
+          "weight": "14",
+          "physical_pauli": "IIIIIYIIIIYIIIIXIIIIXXIIIZIIIIIYIZIIIIZIIIIYIIIIYIIIIIIYIIIIIXIIIZ"
+        },
+        {
+          "class": "16",
+          "target": "S",
+          "logical": "ZXZZ",
+          "weight": "16",
+          "physical_pauli": "ZIYIXXIIIIIZIIIIYIIIIIIIYXIIIIIZIZIIYIIIIIXIZIIZIYIIIIIIIIIIIIIIIY"
+        },
+        {
+          "class": "17",
+          "target": "S",
+          "logical": "ZZZX",
+          "weight": "16",
+          "physical_pauli": "IIYIIIXIIIIIZXIZIIYIIYIIIIIIXIIIIIIIIIIYIIYIIXIZXIIIIIZIIIYIIIIIIZ"
+        }
+      ]
+    },
+    {
+      "source_table": "Table XIX: Destructive triple",
+      "records": [
+        {
+          "class": "0",
+          "target": "MX0",
+          "logical": "IIIX",
+          "weight": "14",
+          "physical_pauli": "IXIIIIIIIIXIXXXIIXIIXXIIXIIIXIIIIXIIIIIIIIIIXIIXIIIIIIIIIIIIIIIIIX"
+        },
+        {
+          "class": "0",
+          "target": "MX1",
+          "logical": "IXII",
+          "weight": "15",
+          "physical_pauli": "IIIIXXIIXIIIIIIIIIIIIIXXIXXIIXXIXIIIIIXXIIIIIXIIIIIIIIIIIXIIIIXIII"
+        },
+        {
+          "class": "0",
+          "target": "MX2",
+          "logical": "IIXI",
+          "weight": "11",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIXIIXIIXIIXIIXIIXIIXIIXIIXIIXIIXI"
+        },
+        {
+          "class": "1",
+          "target": "MX0",
+          "logical": "IIIX",
+          "weight": "12",
+          "physical_pauli": "IIIIIXXIIIXXIXIIIIIIIIIIXIIXIIIIXXIXIIIIIIIIIIIIIIIXIIIIIXIIIIIIII"
+        },
+        {
+          "class": "1",
+          "target": "MX1",
+          "logical": "YYXI",
+          "weight": "18",
+          "physical_pauli": "YZZIXIIIIIIIIIIIIXIZYYIIIYXIXIIZIIIIYIXIIIIIZXIIIIYIIIIIZIIIIIIIII"
+        },
+        {
+          "class": "1",
+          "target": "MX2",
+          "logical": "IIXI",
+          "weight": "11",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIXIIXIIXIIXIIXIIXIIXIIXIIXIIXIIXI"
+        },
+        {
+          "class": "2",
+          "target": "MX0",
+          "logical": "IIIX",
+          "weight": "11",
+          "physical_pauli": "XXIIIIIIXIIIIIXIXIIIXIXIIXIIIIIIIIIIIIIIIIIIIIIXIIIIIXIIIIXIIIIIII"
+        },
+        {
+          "class": "2",
+          "target": "MX1",
+          "logical": "IXII",
+          "weight": "12",
+          "physical_pauli": "IIIIIIXXIIIIIIIXIIXIIXIIIIIXIIIIIIIXIIXIIIIIIXXIIIIXIIIIIIIXIIIIII"
+        },
+        {
+          "class": "2",
+          "target": "MX2",
+          "logical": "XIZI",
+          "weight": "14",
+          "physical_pauli": "IIIIXIIIIIIYYYIIIIIXIIIIIIIIIZIXIIIIZIIIIIZIXIIIIIIIIIZIIIIIYYYIII"
+        },
+        {
+          "class": "3",
+          "target": "MX0",
+          "logical": "IIIX",
+          "weight": "11",
+          "physical_pauli": "XIIXIIIIXIIIIIXXIIIIIIIIIIIIIXIIIXIIIIIIIIXIXIIIIIIIXXIIIIIIIIIIII"
+        },
+        {
+          "class": "3",
+          "target": "MX1",
+          "logical": "XYYI",
+          "weight": "17",
+          "physical_pauli": "IIIIXIIIIIIIXIIIIYZIYIZZYIIIIIIIXIIIIXIZZIIIIIYIIYIYIIIIXIIIIIIIIZ"
+        },
+        {
+          "class": "3",
+          "target": "MX2",
+          "logical": "XZZI",
+          "weight": "16",
+          "physical_pauli": "IIIIIIYIIXXZIZIIIIIIIIIIIYYIIIXIIIZIIIYIIYIIIZIYZIIIIIIIIYIIIIIYII"
+        },
+        {
+          "class": "4",
+          "target": "MX0",
+          "logical": "YIXY",
+          "weight": "15",
+          "physical_pauli": "IIIYIIIIXXIIIIIIIIIXIIIIZZYIIIIYIIIIYIIIIZIXIIIIZYIIIIIIZIIIIIIIYI"
+        },
+        {
+          "class": "4",
+          "target": "MX1",
+          "logical": "IXII",
+          "weight": "10",
+          "physical_pauli": "IIIIIXIIIIIIXXXIIIIIXIIIIIIIIIIIXIIIIIIIIIIIIXIIIIIIIIIIIIIIIXXXII"
+        },
+        {
+          "class": "4",
+          "target": "MX2",
+          "logical": "IIXI",
+          "weight": "10",
+          "physical_pauli": "IXIIIIXIIIIXIIIIXXIIIIIIIIIXIIIIIIIIIIIXIIIIXIIIIIIXIIIIIXIIIIIIII"
+        },
+        {
+          "class": "5",
+          "target": "MX0",
+          "logical": "YZXY",
+          "weight": "14",
+          "physical_pauli": "IZIIIIIYIIIIIIYIIIIYIIIIXIIIIXXIIIIIIXIIIZZIIIIZIIIIYIIIIYIIIIIIYI"
+        },
+        {
+          "class": "5",
+          "target": "MX1",
+          "logical": "YYXZ",
+          "weight": "15",
+          "physical_pauli": "IIXIYIIIIIYIIIIIIYIIXIYIIIIIIIIIIIZXIIIIIIIIYYXIXIYIIIIZIIIIYIIIII"
+        },
+        {
+          "class": "5",
+          "target": "MX2",
+          "logical": "IIXI",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIXIIIIIIXIIIIXIIIIXIIIIXXXIIIIIXIIIIIIIIIIIIIIXIIIIXIIIIII"
+        },
+        {
+          "class": "6",
+          "target": "MX0",
+          "logical": "XIYY",
+          "weight": "15",
+          "physical_pauli": "IIXIIIIIYIIXXIIIIIYIIIIIIIXIIIIIIZYIXIIYYIZIIIIIIZYIIIIIIIIZIIIIII"
+        },
+        {
+          "class": "6",
+          "target": "MX1",
+          "logical": "IXII",
+          "weight": "10",
+          "physical_pauli": "XIIIIIIXIXXIIIIXXIIIIIIXIIIIIIIIXIIIIIIIIXIIIIIIIIIIIIIIIIIIIIIIXI"
+        },
+        {
+          "class": "6",
+          "target": "MX2",
+          "logical": "XIZZ",
+          "weight": "16",
+          "physical_pauli": "IIIIXIIIIIIIIYXIIIIXIYIIIIIIIIZXIIIIIIZIIIIIZYZIIIIIYZIIIIIIXYYIII"
+        },
+        {
+          "class": "7",
+          "target": "MX0",
+          "logical": "XZYY",
+          "weight": "15",
+          "physical_pauli": "IIIYIZIZYYIIIIIIIIZXIIIIIIYIIIIXIZIIYIIIIIIYIIIIIYIZIIIIIIIIIIIIYI"
+        },
+        {
+          "class": "7",
+          "target": "MX1",
+          "logical": "XYYZ",
+          "weight": "16",
+          "physical_pauli": "IIIIIIIIIIIIXYIZIIIIYIIXZIIYIXIIIIIXIYZIIIIIIIIIIIIIIIZIYIIXZIIYII"
+        },
+        {
+          "class": "7",
+          "target": "MX2",
+          "logical": "XZZZ",
+          "weight": "18",
+          "physical_pauli": "IIIIIIYIIIIZIIZIIYIIIZIIIIIIIIIIZIIIIIIZYXYIYZIZIIZIYYIYIIIIIIXIII"
+        }
+      ]
+    },
+    {
+      "source_table": "Table XX: Destructive pair",
+      "records": [
+        {
+          "class": "0",
+          "target": "MX0",
+          "logical": "IIIX",
+          "weight": "11",
+          "physical_pauli": "XXIIIIIIXIIIIIXIXIIIXIXIIXIIIIIIIIIIIIIIIIIIIIIXIIIIIXIIIIXIIIIIII"
+        },
+        {
+          "class": "0",
+          "target": "MX2",
+          "logical": "XIZI",
+          "weight": "14",
+          "physical_pauli": "IIIIXIIIIIIYYYIIIIIXIIIIIIIIIZIXIIIIZIIIIIZIXIIIIIIIIIZIIIIIYYYIII"
+        },
+        {
+          "class": "1",
+          "target": "MX0",
+          "logical": "IIIX",
+          "weight": "11",
+          "physical_pauli": "XIIXIIIIXIIIIIXXIIIIIIIIIIIIIXIIIXIIIIIIIIXIXIIIIIIIXXIIIIIIIIIIII"
+        },
+        {
+          "class": "1",
+          "target": "MX1",
+          "logical": "XYYI",
+          "weight": "17",
+          "physical_pauli": "IIIIXIIIIIIIXIIIIYZIYIZZYIIIIIIIXIIIIXIZZIIIIIYIIYIYIIIIXIIIIIIIIZ"
+        },
+        {
+          "class": "2",
+          "target": "P0",
+          "logical": "IIIX",
+          "weight": "14",
+          "physical_pauli": "IXIIIIIIIIXIXXXIIXIIXXIIXIIIXIIIIXIIIIIIIIIIXIIXIIIIIIIIIIIIIIIIIX"
+        },
+        {
+          "class": "2",
+          "target": "P1",
+          "logical": "ZXZI",
+          "weight": "17",
+          "physical_pauli": "IIIZIYIIIZIYIIIZXIIIIIIIIIIXIIIIIIYXYIIIZIIZIZIIZXIIIIIIIXXIIIIIII"
+        },
+        {
+          "class": "3",
+          "target": "P0",
+          "logical": "IIXI",
+          "weight": "12",
+          "physical_pauli": "IIIXXIIXIIIXIIIIIXXIIIIIIXIIIIIXIXIIIIXIXIIIIIIIIIIIIIIIIIIIIIIIXI"
+        },
+        {
+          "class": "3",
+          "target": "P1",
+          "logical": "IZIX",
+          "weight": "20",
+          "physical_pauli": "IXXIIXYIIIIIIYIIIIIIYIIZZIIZIIZIIIXIXIIIIIIXIIZZIIIIIIIIIIIIZYYYIX"
+        },
+        {
+          "class": "4",
+          "target": "MX1",
+          "logical": "YYXI",
+          "weight": "18",
+          "physical_pauli": "YZZIXIIIIIIIIIIIIXIZYYIIIYXIXIIZIIIIYIXIIIIIZXIIIIYIIIIIZIIIIIIIII"
+        },
+        {
+          "class": "4",
+          "target": "MX2",
+          "logical": "IIXI",
+          "weight": "11",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIXIIXIIXIIXIIXIIXIIXIIXIIXIIXIIXI"
+        },
+        {
+          "class": "5",
+          "target": "MX0",
+          "logical": "YZXY",
+          "weight": "14",
+          "physical_pauli": "IZIIIIIYIIIIIIYIIIIYIIIIXIIIIXXIIIIIIXIIIZZIIIIZIIIIYIIIIYIIIIIIYI"
+        },
+        {
+          "class": "5",
+          "target": "MX2",
+          "logical": "IIXI",
+          "weight": "10",
+          "physical_pauli": "IIIIIIIIIXIIIIIIXIIIIXIIIIXIIIIXXXIIIIIXIIIIIIIIIIIIIIXIIIIXIIIIII"
+        },
+        {
+          "class": "6",
+          "target": "P0",
+          "logical": "IIXZ",
+          "weight": "19",
+          "physical_pauli": "IIZIIIIIIIIIIIIIXIZIIIIIIIZIIIIXIZZXXXIIXIIYXIIIIYYYIIIIIYYIIIIIXI"
+        },
+        {
+          "class": "6",
+          "target": "P1",
+          "logical": "IXIZ",
+          "weight": "16",
+          "physical_pauli": "ZIIIIXIIZIIIIIXXIIIIIYYYIIIIIIXIYIIIIIIIIZIIIIYIIIIIZIXIIIIIIIXYII"
+        },
+        {
+          "class": "7",
+          "target": "P0",
+          "logical": "IIXZ",
+          "weight": "18",
+          "physical_pauli": "ZIIIIIIIIZIIIIIZIIIIIIIIIIIIIIIIIZXIIXIIXIIXIIYZIYZIXIIXIIYIIXIIYZ"
+        },
+        {
+          "class": "7",
+          "target": "P1",
+          "logical": "YYXI",
+          "weight": "18",
+          "physical_pauli": "IIIXIZIYIIIZZIIIIZIIYIIXYIIIXXIYIIIIIIIYIXZIIIIIXIIIIYIIIZIIIIIIII"
+        },
+        {
+          "class": "8",
+          "target": "P0",
+          "logical": "IIXZ",
+          "weight": "17",
+          "physical_pauli": "IIIIIIIXIIXIYXXIIIXYIYZIIIYIIXYIYYYYIIIIIIIIIIIIIIIIIIIIIIIIIIIIYI"
+        },
+        {
+          "class": "8",
+          "target": "P1",
+          "logical": "YYXZ",
+          "weight": "18",
+          "physical_pauli": "IIXIZYIIIYIYIIIIIIIIIIIIIIIXYIIIIIIIIIXZIXIZZXIIIIXZXIIIIIZIIIIIIZ"
+        },
+        {
+          "class": "9",
+          "target": "MX0",
+          "logical": "XIYY",
+          "weight": "15",
+          "physical_pauli": "IIXIIIIIYIIXXIIIIIYIIIIIIIXIIIIIIZYIXIIYYIZIIIIIIZYIIIIIIIIZIIIIII"
+        },
+        {
+          "class": "9",
+          "target": "MX1",
+          "logical": "IXII",
+          "weight": "10",
+          "physical_pauli": "XIIIIIIXIXXIIIIXXIIIIIIXIIIIIIIIXIIIIIIIIXIIIIIIIIIIIIIIIIIIIIIIXI"
+        },
+        {
+          "class": "10",
+          "target": "MX1",
+          "logical": "IXII",
+          "weight": "12",
+          "physical_pauli": "IIIIIIXXIIIIIIIXIIXIIXIIIIIXIIIIIIIXIIXIIIIIIXXIIIIXIIIIIIIXIIIIII"
+        },
+        {
+          "class": "10",
+          "target": "MX2",
+          "logical": "XIZI",
+          "weight": "14",
+          "physical_pauli": "IIIIXIIIIIIYYYIIIIIXIIIIIIIIIZIXIIIIZIIIIIZIXIIIIIIIIIZIIIIIYYYIII"
+        },
+        {
+          "class": "11",
+          "target": "P0",
+          "logical": "IXII",
+          "weight": "11",
+          "physical_pauli": "XXXIIIIIIIIIXXIIIIXXIIIIIIXIIIIIIXIIIIIIIXIIXIIIIIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "11",
+          "target": "P1",
+          "logical": "ZIZX",
+          "weight": "18",
+          "physical_pauli": "IIIXIIIYIZIZIIYIIIIIIIXIIIIXIZYIIIIYIIIIYIIYIXIYIIIIIXXIIIIIYZIIII"
+        },
+        {
+          "class": "12",
+          "target": "B1",
+          "logical": "IXIZ",
+          "weight": "14",
+          "physical_pauli": "IIIIIIZIXIIIIIXIIIIIIYYYIIIIIXIIIIIIIYYYIIIIIIZIIIIIZIXIIIIIIIIIZI"
+        },
+        {
+          "class": "12",
+          "target": "B2",
+          "logical": "XIZI",
+          "weight": "14",
+          "physical_pauli": "IIZIXIIIIIXIIIIIIYYYIIIIIXIIIIIIIYYYIIIIIIZIIIIIZIXIIIIIIIIIZIIIII"
+        },
+        {
+          "class": "13",
+          "target": "P0",
+          "logical": "IXIZ",
+          "weight": "18",
+          "physical_pauli": "XIIXIXYIZZZIXIIIIIIIXZIIIIIIYXYZXZIIIIIIIIIIYIIIIIIIIIIIIIIIIIIIXI"
+        },
+        {
+          "class": "13",
+          "target": "P1",
+          "logical": "XIZZ",
+          "weight": "16",
+          "physical_pauli": "IIXIIIIZIIIIIIIIIIIIIIZZYIIIIIIIIIIIIXYZYIIIIIIYIIIIIZIIIIXXXIXIIZ"
+        },
+        {
+          "class": "14",
+          "target": "P0",
+          "logical": "IZIX",
+          "weight": "18",
+          "physical_pauli": "IIIIIIIIIIIXIIIIIIZIYXIIIIIIIXIIIZIIIXXYIYIIIXYZZIIYIYIIIIZIIIIIIZ"
+        },
+        {
+          "class": "14",
+          "target": "P1",
+          "logical": "IZXI",
+          "weight": "18",
+          "physical_pauli": "IXIXIIIIIIIIZZIIIIIYIIIZXIIIXIIXIIIYYIIIIIYYIIIIIZIIZIIIZXIIIYIIII"
+        },
+        {
+          "class": "15",
+          "target": "P0",
+          "logical": "IZIX",
+          "weight": "16",
+          "physical_pauli": "XIIYIIIIXZIIIIYXIIIIIIIIIIIIZYIIIYIZIZIIIIYIXIIZIIIIYXIIIIIIIIIIII"
+        },
+        {
+          "class": "15",
+          "target": "P1",
+          "logical": "XIZI",
+          "weight": "14",
+          "physical_pauli": "IIIIIYYYIIIIIXIIIIIIIIIZIXIIIIIXIIIIZIXIIIIIIIIIZIIIIIYYYIIIIIIZII"
+        },
+        {
+          "class": "16",
+          "target": "P0",
+          "logical": "IZIX",
+          "weight": "20",
+          "physical_pauli": "XIIZZZZXIYXZIIIXIIIXIIXIIIIIZYIIIYIIYIIXIIIYIIIIIIXIYIIIIIIIIIIIII"
+        },
+        {
+          "class": "16",
+          "target": "P1",
+          "logical": "XZZI",
+          "weight": "17",
+          "physical_pauli": "IIIIIIIIIIIIIIIIIIIIIYIIIIZIIIIIYIXXIXZIIIIIXZZIIIIIIIZXXYIYIIIZIZ"
+        },
+        {
+          "class": "17",
+          "target": "P0",
+          "logical": "IZXI",
+          "weight": "22",
+          "physical_pauli": "XZXXZIIZIIYIIZIIZIXYXXYXXYIXZXIZIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIXI"
+        },
+        {
+          "class": "17",
+          "target": "P1",
+          "logical": "YIXY",
+          "weight": "22",
+          "physical_pauli": "IIIIIZIIIIIIIIIIIIIIIIIIIIIIIIIIIZZXZIXIZXZIYZZYZZYZIXIIXIIYIIXIIX"
+        },
+        {
+          "class": "18",
+          "target": "P0",
+          "logical": "IZXI",
+          "weight": "17",
+          "physical_pauli": "XIIYZZYXIZIZIIXIIIIIXXIIIIIIYZIIIYIIYIIIIIIYIIIIIIIIZIIIIIIIIIIIII"
+        },
+        {
+          "class": "18",
+          "target": "P1",
+          "logical": "YZXY",
+          "weight": "19",
+          "physical_pauli": "IYIIIIIIZIIIIIIZIIIIIIXIIIIXIIYIIIYIIIXXIXIIIIIIYZIIIZIXZZIIYIIYIX"
+        },
+        {
+          "class": "19",
+          "target": "MX0",
+          "logical": "XIYY",
+          "weight": "15",
+          "physical_pauli": "IIXIIIIIYIIXXIIIIIYIIIIIIIXIIIIIIZYIXIIYYIZIIIIIIZYIIIIIIIIZIIIIII"
+        },
+        {
+          "class": "19",
+          "target": "MX2",
+          "logical": "XIZZ",
+          "weight": "16",
+          "physical_pauli": "IIIIXIIIIIIIIYXIIIIXIYIIIIIIIIZXIIIIIIZIIIIIZYZIIIIIYZIIIIIIXYYIII"
+        },
+        {
+          "class": "20",
+          "target": "P0",
+          "logical": "XIYY",
+          "weight": "15",
+          "physical_pauli": "IIIYIIIIIIIXIIIIIIIIXIIIIIYIIXXIIIZYIIIIIIIIZIIIIIIZYIXIIYYIZIIIII"
+        },
+        {
+          "class": "20",
+          "target": "P1",
+          "logical": "ZXZI",
+          "weight": "15",
+          "physical_pauli": "IIIIIIXYYIIIIIIZIIYYIIZIXXIIIIIIXIIIIIZYIIIIIIIXIIYIIIIZIIIIIIIIII"
+        },
+        {
+          "class": "21",
+          "target": "P0",
+          "logical": "XIZX",
+          "weight": "15",
+          "physical_pauli": "XIIIIIYIIXXIIIIIYIIIIIIIXIIIIIIIIIXIIYYIZIIIIIIZYIIIIIIIIZIIIIIIZY"
+        },
+        {
+          "class": "21",
+          "target": "P1",
+          "logical": "ZXZZ",
+          "weight": "16",
+          "physical_pauli": "IIIXIXIIIIIYIIIIIIZXIYYIIZIYYIIIIIIYYIIIIIIIZIIIIIIIZYIIIIIIZIIIII"
+        },
+        {
+          "class": "22",
+          "target": "P0",
+          "logical": "XIZZ",
+          "weight": "16",
+          "physical_pauli": "IZIIIIIIXIIIZIIIIIIIZIIIIIIIZIXIIYIYZIIIIIIYYIXIIIIZIYIIIIIIIIIIXY"
+        },
+        {
+          "class": "22",
+          "target": "P1",
+          "logical": "XZYY",
+          "weight": "15",
+          "physical_pauli": "IIIIXIIIIYIZIZYYIIIIIIIIZXIIIIIIYIIIIYIZIIYIIIIIIYIIIIIYIZIIIIIIII"
+        },
+        {
+          "class": "23",
+          "target": "MX1",
+          "logical": "XYYI",
+          "weight": "17",
+          "physical_pauli": "IIIIXIIIIIIIXIIIIYZIYIZZYIIIIIIIXIIIIXIZZIIIIIYIIYIYIIIIXIIIIIIIIZ"
+        },
+        {
+          "class": "23",
+          "target": "MX2",
+          "logical": "XZZI",
+          "weight": "16",
+          "physical_pauli": "IIIIIIYIIXXZIZIIIIIIIIIIIYYIIIXIIIZIIIYIIYIIIZIYZIIIIIIIIYIIIIIYII"
+        },
+        {
+          "class": "24",
+          "target": "P0",
+          "logical": "XYYI",
+          "weight": "16",
+          "physical_pauli": "XIYIYIIZIZIIIIIZIZZYIIIIIIIXYIIIIXIIYIYIIIIIIYIIIIIIYIIIIIIIIIIIII"
+        },
+        {
+          "class": "24",
+          "target": "P1",
+          "logical": "XZZX",
+          "weight": "16",
+          "physical_pauli": "IYIIIIXIXIYIIIIIIIIIIIIZYIIIIXIIZIXZIIIIYIIZIIIYXIIIIIIIIIIIIZYIII"
+        },
+        {
+          "class": "25",
+          "target": "P0",
+          "logical": "XYYI",
+          "weight": "16",
+          "physical_pauli": "XIYIYIIZIZIIIIIZIZZYIIIIIIIXYIIIIXIIYIYIIIIIIYIIIIIIYIIIIIIIIIIIII"
+        },
+        {
+          "class": "25",
+          "target": "P1",
+          "logical": "XZZZ",
+          "weight": "16",
+          "physical_pauli": "IZIIIIZIIIIIIIZIIIIIIYIZIZIIIIIIXIYXIYIZIIIIXIIIIIIIIIIYYXIYIIIIII"
+        },
+        {
+          "class": "26",
+          "target": "P0",
+          "logical": "XYYI",
+          "weight": "16",
+          "physical_pauli": "ZYIIIIIIIXYIIIIXIYIYIIZIZIIIIIZIZIYIIIIIIIIIIIIIXIIYIYIIIIIIYIIIII"
+        },
+        {
+          "class": "26",
+          "target": "P1",
+          "logical": "ZIZX",
+          "weight": "17",
+          "physical_pauli": "IIIIIIIIIIIIYIIIIIZIXXIIIIIYIIIIIZIYIIYYYZYIIYIIIYIIIIIIIZIYIIIIZI"
+        },
+        {
+          "class": "27",
+          "target": "MX0",
+          "logical": "XZYY",
+          "weight": "15",
+          "physical_pauli": "IIIYIZIZYYIIIIIIIIZXIIIIIIYIIIIXIZIIYIIIIIIYIIIIIYIZIIIIIIIIIIIIYI"
+        },
+        {
+          "class": "27",
+          "target": "MX1",
+          "logical": "XYYZ",
+          "weight": "16",
+          "physical_pauli": "IIIIIIIIIIIIXYIZIIIIYIIXZIIYIXIIIIIXIYZIIIIIIIIIIIIIIIZIYIIXZIIYII"
+        },
+        {
+          "class": "28",
+          "target": "P0",
+          "logical": "XYYZ",
+          "weight": "16",
+          "physical_pauli": "YIYIXZIIIIIIIIIIIIIYIIIIIIZXXIIIIXZIYIYIIIIZZXIIIIIIYIIIIIIIIIIIII"
+        },
+        {
+          "class": "28",
+          "target": "P1",
+          "logical": "XZZI",
+          "weight": "16",
+          "physical_pauli": "IIIIIIIXXIIIIIIXIYYIZIZYYIIIIIIXIIIIIIIYZIIIIIZIIYIZIIIIIIIIIIIIIZ"
+        },
+        {
+          "class": "29",
+          "target": "MX1",
+          "logical": "XYYZ",
+          "weight": "16",
+          "physical_pauli": "IIIIIIIIIIIIXYIZIIIIYIIXZIIYIXIIIIIXIYZIIIIIIIIIIIIIIIZIYIIXZIIYII"
+        },
+        {
+          "class": "29",
+          "target": "MX2",
+          "logical": "XZZZ",
+          "weight": "18",
+          "physical_pauli": "IIIIIIYIIIIZIIZIIYIIIZIIIIIIIIIIZIIIIIIZYXYIYZIZIIZIYYIYIIIIIIXIII"
+        },
+        {
+          "class": "30",
+          "target": "P0",
+          "logical": "XYYZ",
+          "weight": "16",
+          "physical_pauli": "IIIYIYIIZIIIIIIIIIIIIXYIIIIIIYIIXIIXIZIYIZIIXIYZIIIIIIIZIIIIIIIIIX"
+        },
+        {
+          "class": "30",
+          "target": "P1",
+          "logical": "ZIYY",
+          "weight": "16",
+          "physical_pauli": "YIXIZIIZIIIIIIIIIXIIIIIIIXYIZIIXIIYIYIIIZIIYIIIIIIYZIIIIIIIIIIIIXI"
+        },
+        {
+          "class": "31",
+          "target": "MX0",
+          "logical": "XZYY",
+          "weight": "15",
+          "physical_pauli": "IIIYIZIZYYIIIIIIIIZXIIIIIIYIIIIXIZIIYIIIIIIYIIIIIYIZIIIIIIIIIIIIYI"
+        },
+        {
+          "class": "31",
+          "target": "MX2",
+          "logical": "XZZZ",
+          "weight": "18",
+          "physical_pauli": "IIIIIIYIIIIZIIZIIYIIIZIIIIIIIIIIZIIIIIIZYXYIYZIZIIZIYYIYIIIIIIXIII"
+        },
+        {
+          "class": "32",
+          "target": "P0",
+          "logical": "XZYY",
+          "weight": "18",
+          "physical_pauli": "IIIZIIYIIYIIIIIIIIXIIIIIIIIXIIZIIZIYIIYIXIYXXYIIIIIXYZIIIIIYIIIIII"
+        },
+        {
+          "class": "32",
+          "target": "P1",
+          "logical": "YYXZ",
+          "weight": "19",
+          "physical_pauli": "IIXIIIIIYIXIIXIZIZIIIIYIIIYIXZIYIIIIIIIIIXIIIIXIIZIIIIXIIYYIIIXZII"
+        },
+        {
+          "class": "33",
+          "target": "P0",
+          "logical": "YIIY",
+          "weight": "20",
+          "physical_pauli": "IIYIXYIIZIIZXIZIIZIIYXXYXXYXIYIXZXIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"
+        },
+        {
+          "class": "33",
+          "target": "P1",
+          "logical": "ZXZZ",
+          "weight": "18",
+          "physical_pauli": "IZIIIIIYIIZIIZIIIIXIIIIIIIIIIIIIIIIIIZIZIXYXIXZIIZIIIXXIYZIIIIIYII"
+        },
+        {
+          "class": "34",
+          "target": "P0",
+          "logical": "YIXY",
+          "weight": "15",
+          "physical_pauli": "IIIYIIIIIIIXIIIIIIYXIIIIZIXIIIIYIIIIYIIIIYXXIIIIZIIIIIIIIIZZIIIIYI"
+        },
+        {
+          "class": "34",
+          "target": "P1",
+          "logical": "ZXZI",
+          "weight": "15",
+          "physical_pauli": "YYIIZIXXIIIIIIXIIIIIIXYYIIIIIIZIIIIIIZIIIIIIIIIIIIIIIZYIIIIIIIXIIY"
+        },
+        {
+          "class": "35",
+          "target": "P0",
+          "logical": "YYXI",
+          "weight": "17",
+          "physical_pauli": "IYIIIIIIIZIIIIYIIIIIIIIIZIIIIIZIIXXYIYIIYZIZYIIXIIIIIIYIIIIIIIIIYX"
+        },
+        {
+          "class": "35",
+          "target": "P1",
+          "logical": "ZIYY",
+          "weight": "16",
+          "physical_pauli": "IIIIXYIZIIIIYIIXZIIYIXIIIIIIIIIIIIIIIIIIIIIIIIZIYIIXZIIYIIIIXIYZII"
+        },
+        {
+          "class": "36",
+          "target": "P0",
+          "logical": "YYXI",
+          "weight": "16",
+          "physical_pauli": "IIYIZXIIIZIIIIIYIIIIIIIIXYIIIIIIYIIYIZIXIIYIIIYYIXIIIIIIIIIIIIIIIZ"
+        },
+        {
+          "class": "36",
+          "target": "P1",
+          "logical": "ZIZX",
+          "weight": "16",
+          "physical_pauli": "IIIZIIYYIIZIIIXIIIIXIIIIIIXIYYIXIIIIIIZIIIIZIIIIIIIIXIIIIIIYYIIIXI"
+        },
+        {
+          "class": "37",
+          "target": "P0",
+          "logical": "YYXZ",
+          "weight": "15",
+          "physical_pauli": "IIIIIYIIXIYIIIIIIIIIIIIXIYIIIIIYIYXIXIYIIIIZIIIIYIIIIIIZXIIIIIIIIY"
+        },
+        {
+          "class": "37",
+          "target": "P1",
+          "logical": "YZIY",
+          "weight": "15",
+          "physical_pauli": "IYXIIIIZIXIIIIYIIIIYIIIIIIIXIIIIIIIIIIIIIZZIIIIYIIIIYIIIIYXXIIIIZI"
+        },
+        {
+          "class": "38",
+          "target": "MX0",
+          "logical": "YZXY",
+          "weight": "14",
+          "physical_pauli": "IZIIIIIYIIIIIIYIIIIYIIIIXIIIIXXIIIIIIXIIIZZIIIIZIIIIYIIIIYIIIIIIYI"
+        },
+        {
+          "class": "38",
+          "target": "MX1",
+          "logical": "YYXZ",
+          "weight": "15",
+          "physical_pauli": "IIXIYIIIIIYIIIIIIYIIXIYIIIIIIIIIIIZXIIIIIIIIYYXIXIYIIIIZIIIIYIIIII"
+        },
+        {
+          "class": "39",
+          "target": "P0",
+          "logical": "ZIYY",
+          "weight": "16",
+          "physical_pauli": "YIXZIIIIIIIIIIIIIYIIIIIIZXXIIIIYIIYIYIIIIZZXIIIIIIYIIIIIIIIIIIIIXZ"
+        },
+        {
+          "class": "39",
+          "target": "P1",
+          "logical": "ZXZZ",
+          "weight": "16",
+          "physical_pauli": "IIIIIYIIIIIIZXIYYIIZIYYIIIIIIIXIXIIIIIZIIIIIIIZYIIIIIIZIIIIIIIYYII"
+        },
+        {
+          "class": "40",
+          "target": "P0",
+          "logical": "ZIZX",
+          "weight": "20",
+          "physical_pauli": "IIIZXIIIIIIZZXIXXYIIYIIXYIIYIIIYIIIYYIIIIZIIIIIXIIYIIZIIIIIIIIIIZI"
+        },
+        {
+          "class": "40",
+          "target": "P1",
+          "logical": "ZXZI",
+          "weight": "18",
+          "physical_pauli": "IIIIIIIIXIIIIIYIIIIIIYIIIYIIZYIIXIIIIXYYZIIIIIIIZIIIIIYXXIIIZIIYIZ"
+        }
+      ]
+    }
+  ]
+}

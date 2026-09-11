@@ -1,0 +1,170 @@
+{
+  "1": {
+    "page": 5,
+    "caption": "FIG. 1: Overview of the paper in terms of an end-to-end pipeline of increasingly lowered representations of Shor’s algorithm for the ECDLP. Stage 1 gives the high-level mathematical description of the algorithm (Part II). Stage 2 describes it in terms of a high-level logical quantum circuit (Part III). Stage 3 compiles these circuits into executable, architecture-legal measurement schedules (Part IV). Panel 3 illustrates the assignment of logical qubits to memory blocks across successive measurement layers: each box represents a memory block, each colored rectangle represents a logical qubit, and the dashed line denotes a logical-qubit move between memory blocks performed by integrated routing. Stage 4 lowers the schedules to native operations on the QEC architecture using its logical instruction set architecture (ISA) (Part V).",
+    "file": "/assets/figure-1.png",
+    "label": "From algorithm to physical operations",
+    "hint": "Read downward: each representation adds the constraints needed to obtain an executable schedule.",
+    "fold": false
+  },
+  "2": {
+    "page": 15,
+    "caption": "FIG. 2: An arbitrary Pauli-controlled-Pauli (PcP) gate can be decomposed using three measurement layers and an ancilla, as shown for a CNOT gate. The first measurement is akin to copying the first qubit onto a clean ancilla, providing the intuition for our measurement-based integrated routing operations.",
+    "file": "/assets/figure-2.png",
+    "label": "Measurement-based CNOT",
+    "hint": "The first parity measurement copies information into an ancilla; this is also the entry point for routing.",
+    "fold": false
+  },
+  "3": {
+    "page": 16,
+    "caption": "FIG. 3: Gidney adder layout and circuit.",
+    "file": "/assets/figure-3.png",
+    "label": "Gidney adder layout",
+    "hint": "Follow the carry through the layout, then through the circuit that computes and erases it.",
+    "fold": true
+  },
+  "4": {
+    "page": 18,
+    "caption": "FIG. 4: Routing of the phase-approximate modular adder as described in algorithm 2.",
+    "file": "/assets/figure-4.png",
+    "label": "Phase-approximate adder routing",
+    "hint": "Follow a register across blocks while the same measurement sequence performs modular addition.",
+    "fold": true
+  },
+  "5": {
+    "page": 22,
+    "caption": "FIG. 5: Full-scale secp256k1 device. Purple blocks are magic-state factories required for CCZ state generation, green blocks are memory blocks, orange blocks are cat-state factories, and blue blocks are Bell-state bundles for LM2 measurements. Each group of four orange blocks forms a mobile cat-state bundle pair. The two cyan sites inside each magic-factory group are local six-qubit C6 Bell-state sources. The cobalt and crimson blocks are reserved for two Logical CliNR instances used for Clifford-frame clearing. The small gray box attached to each code block is its local ion reservoir, while the full loading reservoir runs along the right edge of the device.",
+    "file": "/assets/figure-5.png",
+    "label": "Full device layout",
+    "hint": "Green stores data; purple prepares CCZ states; orange prepares measurement cats. The extra blocks and ion reservoirs complete the physical inventory.",
+    "fold": false
+  },
+  "6": {
+    "page": 23,
+    "caption": "FIG. 6: Swap-resilient LDU for data qubit D and aligned ancilla qubit A. Its final measurement is augmented with loss and leakage readout.",
+    "file": "/assets/figure-6.png",
+    "label": "Swap-resilient loss detector",
+    "hint": "D carries the data and A is its aligned ancilla. The final readout also identifies loss or leakage.",
+    "fold": false
+  },
+  "8": {
+    "page": 26,
+    "caption": "FIG. 8: Local cat-state circulation for Q102. Three weight-30 factories occupy 90 of the 102 sites along the top edge, leaving 12 sites unused; the bottom edge is not needed. In general, factories are packed along the top edge up to the capacity in eq. (3), then continued along the bottom edge. Note that every factory has the same circulation distance 2n + 8.",
+    "file": "/assets/figure-8.png",
+    "label": "Local cat circulation",
+    "hint": "Three weight-30 factories fit on the 102-site top edge. Their circulation paths have equal length.",
+    "fold": true
+  },
+  "9": {
+    "page": 28,
+    "caption": "FIG. 9: Device-level handoff schedule for reusing two cat-state bundles in a measurement stream. Each memory block has three cat-state factories, shown in orange. Lookahead bundle B begins the logical measurement at M6 while bundle A follows the highlighted route toward that same block (a). A arrives at one of M6’s local factories (b) and is prepared and verified as B continues measuring (c). A then takes over the ongoing measurement at M6, releasing B to advance toward the following target (d).",
+    "file": "/assets/figure-9.png",
+    "label": "Cat-bundle handoff",
+    "hint": "While one bundle measures, the other arrives and is prepared. The handoff lets transport overlap measurement.",
+    "fold": true
+  },
+  "10": {
+    "page": 29,
+    "caption": "FIG. 10: Parallel cat-state measurement of two disjoint logical representatives in the [[6, 2, 2]] ”C6” code. The prepared cat states CX and CZ control data–cat gates on the disjoint representatives X0 = XIXIXI and Z1 = IZIZIZ, respectively. Red controlled-X gates belong to the logical-X measurement, while blue controlled-Z gates belong to the logical-Z measurement.",
+    "file": "/assets/figure-10.png",
+    "label": "Disjoint logical supports",
+    "hint": "The X and Z representatives occupy alternating physical sites, so two cat-mediated measurements can run together.",
+    "fold": false
+  },
+  "11": {
+    "page": 31,
+    "caption": "FIG. 11: Logical CliNR and its compiler-level motion primitive. (a) The logical CliNR circuit of Webster and Delfosse [51]. Joint stabilizer measurements and a Pauli correction prepare and verify a logical resource state across auxiliary blocks A and B. A transversal CNOT gate from the data block to A, followed by destructive X- and Z-basis measurements and the Pauli correction Q, teleports C|ψ⟩L into block B. (b) One forward step begins with adjacent ordering [B, A, Di, Di+1]. Exchanging the B carrier with Di gives [Di, A, B, Di+1]. The physical carriers are then kept fixed while the semantic roles A and B are freely exchanged, yielding [Di, B, A, Di+1]. The renewed triple [B, A, Di+1] is therefore ready for the next CliNR step.",
+    "file": "/assets/figure-11.png",
+    "label": "CliNR circuit and motion",
+    "hint": "Verified resource blocks teleport the Clifford-corrected state; exchanging carrier roles prepares the next forward step.",
+    "fold": true
+  },
+  "12": {
+    "page": 31,
+    "caption": "FIG. 12: Schematic temporal structure of the compiled elliptic-curve point-addition circuits. Time runs from left to right, and each row denotes a logical-qubit index. A serial component (e.g., an adder) first visits its support in descending index order (red) and then returns in ascending order (blue). In between components, we may have shallow layers of operations ran all in parallel (e.g., large controlled multi-target gates for conditional inversions), and/or dense layers of operations on a single block (e.g., a table lookup’s depth-first selector traversal).",
+    "file": "/assets/figure-12.png",
+    "label": "Serial components in time",
+    "hint": "Time runs left to right. A component visits register indices in one direction, then reverses to uncompute.",
+    "fold": true
+  },
+  "13": {
+    "page": 32,
+    "caption": "FIG. 13: Idle frame clearing around a serial component. Time runs from left to right, and vertical position denotes logical-qubit index. (a) CliNR cleans the frames of code blocks that are pending execution in a serial component. (b) Execution in a serial component reaches the end of the code blocks, and must now uncompute them, iterating in reverse order. (c) CliNR cleans the frames of the uncomputed blocks up to the first block of the next serial component.",
+    "file": "/assets/figure-13.png",
+    "label": "Clearing frames ahead of execution",
+    "hint": "Frame clearing works on blocks the serial arithmetic will visit next, then follows its reversal.",
+    "fold": true
+  },
+  "14": {
+    "page": 32,
+    "caption": "FIG. 14: Logical CliNR for three serial components with partially overlapping supports. Each pair (Bi, Ai) provides the two resource blocks for one CliNR instance. The diagram shows all 69 data blocks, q0, . . . , q68; the white blocks q63, . . . , q68 are unused. The diagram on the right shows the three serial components executing in sequence in application order. The first component acts on q0, . . . , q34. The second acts on q35, . . . , q54, and the third acts on q45, . . . , q62, overlapping the second component on q45, . . . , q54. The two CliNR instances begin at the first even- and odd-indexed blocks of each support, then clear frames ahead of execution along the solid purple paths. Because the third component overlaps the second, the resource pairs must backtrack to the start of the overlap before they can begin clearing the third component; the dashed purple paths show this backtracking.",
+    "file": "/assets/figure-14.png",
+    "label": "Overlapping component supports",
+    "hint": "Purple paths show clearing ahead of execution. Dashed paths show the backtracking needed when the next support overlaps.",
+    "fold": true
+  },
+  "15": {
+    "page": 33,
+    "caption": "FIG. 15: Logical CliNR on consecutive serial components with overlapping support. Time runs from left to right, and vertical position denotes logical-qubit index. (a) Execution of a serial component begins uncomputing results, iterating across blocks in reversed order. (b) If the last block of a serial component aligns with the start of the next one, the logical CliNR instance working on the first component must block execution. Transitions to disjoint or already prepared supports avoid this. (c) The next execution begins once its first target is clean, while logical CliNR continues just in time ahead of it.",
+    "file": "/assets/figure-15.png",
+    "label": "When frame clearing blocks execution",
+    "hint": "The next component waits if its first block has not yet been cleared. Prepared or disjoint supports avoid that wait.",
+    "fold": true
+  },
+  "16": {
+    "page": 33,
+    "caption": "FIG. 16: Circuit equivalence between a Toffoli gate, a CCZ gate conjugated by Hadamard gates on the target qubit, a CCZ injection circuit conjugated by Hadamard gates on the target qubit, and the same circuit with Hadamards implemented via conjugation with the logical measurements of the CCZ injection circuit.",
+    "file": "/assets/figure-16.png",
+    "label": "Toffoli as a CCZ injection",
+    "hint": "Hadamards on the target relate Toffoli and CCZ. Their action can be absorbed into the measured Pauli operators.",
+    "fold": false
+  },
+  "17": {
+    "page": 35,
+    "caption": "FIG. 17: Preparation of two logical |H⟩states in the C6 code.",
+    "file": "/assets/figure-17.png",
+    "label": "Preparing encoded H states",
+    "hint": "The C6 circuit prepares and verifies two encoded H states used by the factory.",
+    "fold": true
+  },
+  "18": {
+    "page": 35,
+    "caption": "FIG. 18: The Eastinthillation factory circuit.",
+    "file": "/assets/figure-18.png",
+    "label": "Complete Eastinthillation circuit",
+    "hint": "Follow prepared states through error checks into the accepted CCZ output.",
+    "fold": true
+  },
+  "19": {
+    "page": 38,
+    "caption": "FIG. 19: Physical measurement schedule for the Eastinthillation factory. C60 and C61 are logical qubits drawn from the two distinct C6 code blocks dedicated to this factory’s Q66 block.",
+    "file": "/assets/figure-19.png",
+    "label": "Factory measurement schedule",
+    "hint": "This expands the factory circuit into physical measurements; its two C6 inputs come from distinct blocks.",
+    "fold": true
+  },
+  "20": {
+    "page": 40,
+    "caption": "FIG. 20: Layout of the four Eastinthillation factories required to sustain the application consumption rate. Each Q66 block is adjacent to three weight-16 cat-state factories and has two dedicated zero-level C6 T-state factories. The two cyan sites at the lower left of each factory are its local six-qubit C6 Bell-state sources.",
+    "file": "/assets/figure-20.png",
+    "label": "Four-factory layout",
+    "hint": "Each Q66 block has three cat factories, two C6 state sources, and dedicated Bell-state preparation.",
+    "fold": true
+  },
+  "21": {
+    "page": 57,
+    "caption": "FIG. 21: Routing of the point-addition algorithm, stages 1–2.",
+    "file": "/assets/figure-21.png",
+    "label": "Point-addition routing, stages 1–2",
+    "hint": "Track the named registers as arithmetic changes both their contents and their block locations.",
+    "fold": true
+  },
+  "21b": {
+    "page": 58,
+    "caption": "FIG. 21: Routing of the point-addition algorithm, continued: stages 3–5. The windowed point add ends in the same configuration as it begins, allowing for the routing to loop cleanly.",
+    "file": "/assets/figure-21b.png",
+    "label": "Point-addition routing, stages 3–5",
+    "hint": "The final placement matches the starting placement, allowing the next window to reuse the same routing loop.",
+    "fold": true
+  }
+}

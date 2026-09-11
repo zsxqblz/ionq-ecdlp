@@ -1,0 +1,555 @@
+{
+  "scope": "Exposition and local mathematical-context review, not independent reproduction of resource estimates",
+  "lessonCount": 50,
+  "newDiagrams": 7,
+  "baseCommit": "be7c5165b2d09532997735f48bea8c370cbbd162",
+  "lessons": [
+    {
+      "slug": "shor-ecdlp",
+      "title": "III. From an elliptic-curve key to a Fourier sample",
+      "sections": 5,
+      "changes": [
+        "Clarified local notation or a stated operation contract.",
+        "Clarified local notation or a stated operation contract.",
+        "Clarified local notation or a stated operation contract.",
+        "Added a precise explanatory circuit or diagram."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "success-probability",
+      "title": "IV. What does a 63% success probability mean?",
+      "sections": 5,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use.",
+        "Added a precise explanatory circuit or diagram."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "failure-analysis",
+      "title": "Appendix B. Every way the arithmetic can fail",
+      "sections": 8,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "shor-proos-zalka",
+      "title": "Reference [3, 24]. Why Shor works for elliptic curves",
+      "sections": 4,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "semiclassical-qft",
+      "title": "Reference [57]. Measuring the Fourier transform one qubit at a time",
+      "sections": 6,
+      "changes": [
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "mosca-success-bound",
+      "title": "Reference [56]. Deriving the conservative Fourier success bound",
+      "sections": 5,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Added a precise explanatory circuit or diagram."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "ekera-postprocessing",
+      "title": "Reference [37]. Trading phase-estimation work for classical search",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "xii-architecture",
+      "title": "XII · Architecture: where logical gates become elapsed time",
+      "sections": 5,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "xii-a-device",
+      "title": "XII.A · The secp256k1 device",
+      "sections": 5,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 1
+    },
+    {
+      "slug": "xii-b-swap-loss",
+      "title": "XII.B · Swap-loss and a detector that follows the missing ion",
+      "sections": 4,
+      "changes": [
+        "Defined the physical Pauli-noise scale, per-cycle loss and leakage rates, and conditional swap probability locally; retained the detector circuit and path table."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 2
+    },
+    {
+      "slug": "xii-c-reusable-cats",
+      "title": "XII.C · Reusable cat factories and a transport pipeline",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 2
+    },
+    {
+      "slug": "xii-d-claw",
+      "title": "XII.D · Clifford frames, idle clearing, and depth-one CCZ",
+      "sections": 7,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Reconnected a sentence interrupted by a unit note."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 7
+    },
+    {
+      "slug": "appendix-f-swap-loss",
+      "title": "Appendix F · How sensitive is memory to the swap probability?",
+      "sections": 4,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 1
+    },
+    {
+      "slug": "ref-walking-cat",
+      "title": "Reference [1] · The Walking Cat architecture",
+      "sections": 7,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "ref-cat-measurements",
+      "title": "Reference [75] · Why verified cat states measure logical Paulis",
+      "sections": 7,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "ref-gate-teleportation",
+      "title": "Reference [76] · Gate teleportation and the CCZ correction polynomial",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 3,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "ref-logical-clinr",
+      "title": "Reference [51] · Logical CliNR and scheduler codes",
+      "sections": 7,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "ref-loss-detection",
+      "title": "References [72, 71] · Detecting leakage, locating loss, and replacing a damaged carrier",
+      "sections": 8,
+      "changes": [
+        "Read all subsections; existing definitions and visual explanation retained."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "point-addition",
+      "title": "V. High-level implementation of point addition",
+      "sections": 5,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "binary-gcd",
+      "title": "VI. Optimized binary gcd iteration",
+      "sections": 5,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "modular-squaring",
+      "title": "VII. Modular squaring",
+      "sections": 5,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "appendix-algorithms",
+      "title": "Appendix A. Algorithms",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Added a precise explanatory circuit or diagram."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "schrottenloher-arithmetic",
+      "title": "Reference [2]. Schrottenloher’s arithmetic construction",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "temporary-and-adders",
+      "title": "Reference [36]. Temporary ANDs and Gidney adders",
+      "sections": 5,
+      "changes": [
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "dialog-multiplication",
+      "title": "Reference [52]. The Dialog representation",
+      "sections": 4,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "litinski-add-subtract",
+      "title": "Reference [54]. Litinski’s controlled add–subtract",
+      "sections": 5,
+      "changes": [
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "karatsuba-squaring",
+      "title": "Reference [53]. Karatsuba and the one-level square split",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "compiler-overview",
+      "title": "VIII · From arithmetic to executable measurements",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "constraints-scheduling",
+      "title": "IX · Scheduling with Pauli frames and finite resources",
+      "sections": 7,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "integrated-routing",
+      "title": "X · Moving data while arithmetic is already running",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 3
+    },
+    {
+      "slug": "verification",
+      "title": "XI · What the compiler checks, and what those checks prove",
+      "sections": 7,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "appendix-integrated-routing",
+      "title": "Appendix C · Follow one point-addition window through memory",
+      "sections": 9,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 1
+    },
+    {
+      "slug": "appendix-clifford-synthesis",
+      "title": "Appendix D · How the hierarchy becomes a concrete schedule",
+      "sections": 8,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Added a precise explanatory circuit or diagram."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "reference-table-lookup",
+      "title": "Reference · Space-time optimized table lookup",
+      "sections": 7,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 3,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "reference-beam-search-decoder",
+      "title": "Reference [74] · Beam-search decoding and the memory-error estimate",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use.",
+        "Added a precise explanatory circuit or diagram.",
+        "Added a precise explanatory circuit or diagram.",
+        "Added a precise explanatory circuit or diagram."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "section-12e-eastinthillation",
+      "title": "XII E · The Eastinthillation CCZ factory",
+      "sections": 7,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use.",
+        "Added a precise explanatory circuit or diagram."
+      ],
+      "inlineDiagrams": 3,
+      "sourcePanels": 4
+    },
+    {
+      "slug": "appendix-e-resource-totals",
+      "title": "Appendix E · The complete resource ledger",
+      "sections": 5,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "appendix-g-q66-representatives",
+      "title": "Appendix G · The physical Pauli certificates",
+      "sections": 7,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "eastin-toffoli-distillation",
+      "title": "Eastin · Eight magic states into one Toffoli resource",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 2,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "campbell-howard-synthillation",
+      "title": "Campbell–Howard · Synthesis and error checks in one matrix",
+      "sections": 5,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 3,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "dasu-c6-zero-level",
+      "title": "Dasu et al. · Zero-level verification in C6",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 3,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "goto-state-encoding",
+      "title": "Goto · The C6 encoder and level-raising teleportation",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 3,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "reference-knill-c6",
+      "title": "Knill · The C6 error-detecting code",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "index",
+      "title": "Breaking 256-bit elliptic-curve signatures: a circuit-to-hardware study",
+      "sections": 4,
+      "changes": [
+        "Reviewed the landing page: primary quantities are defined locally; detailed mechanisms remain linked rather than duplicated."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "introduction",
+      "title": "I. Introduction: what does a complete resource estimate count?",
+      "sections": 4,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 1
+    },
+    {
+      "slug": "overview",
+      "title": "II. Overview: connect circuits, schedules, and hardware",
+      "sections": 6,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "conclusion",
+      "title": "Conclusion: what the estimate establishes and what remains open",
+      "sections": 4,
+      "changes": [
+        "Retained the self-contained assumption table and defined logical faults."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "notation",
+      "title": "Notation: domains, operations, and resource units",
+      "sections": 2,
+      "changes": [
+        "Added register, gate, and measurement drawing conventions."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "reference-mixed-fallback",
+      "title": "Mixed-fallback rotation synthesis: spend fewer T states",
+      "sections": 5,
+      "changes": [
+        "Added local setup: domains, inputs, or code/measurement conventions.",
+        "Defined symbols or assumptions at their point of use.",
+        "Defined symbols or assumptions at their point of use."
+      ],
+      "inlineDiagrams": 1,
+      "sourcePanels": 0
+    },
+    {
+      "slug": "audit",
+      "title": "Source coverage and mathematical audit",
+      "sections": 7,
+      "changes": [
+        "Updated evidence boundaries and added the per-lesson context review record."
+      ],
+      "inlineDiagrams": 0,
+      "sourcePanels": 0
+    }
+  ]
+}

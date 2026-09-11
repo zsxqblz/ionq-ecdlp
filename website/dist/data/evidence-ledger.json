@@ -1,0 +1,586 @@
+{
+  "source": "https://cdn.prod.website-files.com/68836d4838193cb461ebc7d2/6a9f3d3ada3cb06dec2ac20e_IonQ%20Fully%20Compiled%20End-to-End%20Resource%20Estimate%20for%20Breaking%20256-Bit%20Elliptic-Curve%20Signatures.pdf",
+  "claims": [
+    {
+      "claim": "Circuit-comparison Toffoli count about39million at1457logical qubits",
+      "status": "reported circuit count under comparison convention",
+      "location": "I and III; AppendixE opening",
+      "pages": [
+        4,
+        11,
+        12,
+        13,
+        60
+      ],
+      "lesson": "binary-gcd"
+    },
+    {
+      "claim": "Compiled Toffoli injections40,420,330",
+      "status": "reported compiled count, conditional operations always executed",
+      "location": "TableXI and AppendixE",
+      "pages": [
+        60
+      ],
+      "lesson": "appendix-e-resource-totals"
+    },
+    {
+      "claim": "Per-input masked oracle failure p_f≤0.03346",
+      "status": "analytical count plus statistical bound on truncated binary-gcd failures",
+      "location": "AppendixB3, confidence1−2^−128",
+      "pages": [
+        56
+      ],
+      "lesson": "failure-analysis"
+    },
+    {
+      "claim": "P_alg≥(max(0,sqrt(P0)−2p_f))²",
+      "status": "proved given phase-aware per-input failure assumption and averaged randomness",
+      "location": "IV and AppendixB4",
+      "pages": [
+        8,
+        9,
+        56
+      ],
+      "lesson": "success-probability"
+    },
+    {
+      "claim": "Conservative Fourier baseline near0.657",
+      "status": "rigorous nearest-rounding starting result; shortened-register use requires adequate classical recovery",
+      "location": "IVB, MoscaCorollary19, omitted-window implementation inIII",
+      "pages": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "lesson": "mosca-success-bound"
+    },
+    {
+      "claim": "Heuristic ideal classical recovery near0.99",
+      "status": "heuristic postprocessing branch with additional search",
+      "location": "IVB and Ekerå§6",
+      "pages": [
+        9,
+        10
+      ],
+      "lesson": "ekera-postprocessing"
+    },
+    {
+      "claim": "75,251,329charged layers and25.690days",
+      "status": "compiled depth combined with modeled mean layer duration",
+      "location": "TableI; AppendixE23 uses0.0294958seconds",
+      "pages": [
+        8,
+        62,
+        63
+      ],
+      "lesson": "appendix-e-resource-totals"
+    },
+    {
+      "claim": "19,397physical qubits",
+      "status": "modeled peak device inventory",
+      "location": "AppendixE22",
+      "pages": [
+        62
+      ],
+      "lesson": "appendix-e-resource-totals"
+    },
+    {
+      "claim": "93.6percent of sampledToffolis admit depth-one injection",
+      "status": "sampled Clifford-frame evidence, not a universal representability theorem",
+      "location": "XIID3",
+      "pages": [
+        31,
+        32,
+        33
+      ],
+      "lesson": "xii-d-claw"
+    },
+    {
+      "claim": "Q66physical representatives realize prescribed logical commutation and disjoint layers",
+      "status": "finite disclosed certificate; checked during note preparation",
+      "location": "AppendixG",
+      "pages": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "lesson": "appendix-g-q66-representatives"
+    },
+    {
+      "claim": "End-to-end success40.7percent/63.3percent",
+      "status": "reported conservative/heuristic algorithm branches, both with modeled hardware failure",
+      "location": "IIC, IV, AppendixE3",
+      "pages": [
+        7,
+        9,
+        10,
+        63
+      ],
+      "lesson": "appendix-e-resource-totals"
+    }
+  ],
+  "coverage": [
+    {
+      "title": "XII · Architecture: where logical gates become elapsed time",
+      "group": "paper",
+      "url": "/lesson/xii-architecture/",
+      "sourcePages": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "title": "XII.A · The secp256k1 device",
+      "group": "paper",
+      "url": "/lesson/xii-a-device/",
+      "sourcePages": [
+        21,
+        22
+      ]
+    },
+    {
+      "title": "XII.B · Swap-loss and a detector that follows the missing ion",
+      "group": "paper",
+      "url": "/lesson/xii-b-swap-loss/",
+      "sourcePages": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "title": "XII.C · Reusable cat factories and a transport pipeline",
+      "group": "paper",
+      "url": "/lesson/xii-c-reusable-cats/",
+      "sourcePages": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "title": "XII.D · Clifford frames, idle clearing, and depth-one CCZ",
+      "group": "paper",
+      "url": "/lesson/xii-d-claw/",
+      "sourcePages": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ]
+    },
+    {
+      "title": "Appendix F · How sensitive is memory to the swap probability?",
+      "group": "appendix",
+      "url": "/lesson/appendix-f-swap-loss/",
+      "sourcePages": [
+        63,
+        64
+      ]
+    },
+    {
+      "title": "Reference [1] · The Walking Cat architecture",
+      "group": "references",
+      "url": "/lesson/ref-walking-cat/",
+      "sourcePages": []
+    },
+    {
+      "title": "Reference [75] · Why verified cat states measure logical Paulis",
+      "group": "references",
+      "url": "/lesson/ref-cat-measurements/",
+      "sourcePages": []
+    },
+    {
+      "title": "Reference [76] · Gate teleportation and the CCZ correction polynomial",
+      "group": "references",
+      "url": "/lesson/ref-gate-teleportation/",
+      "sourcePages": []
+    },
+    {
+      "title": "Reference [51] · Logical CliNR and scheduler codes",
+      "group": "references",
+      "url": "/lesson/ref-logical-clinr/",
+      "sourcePages": []
+    },
+    {
+      "title": "References [72, 71] · Detecting leakage, locating loss, and replacing a damaged carrier",
+      "group": "references",
+      "url": "/lesson/ref-loss-detection/",
+      "sourcePages": []
+    },
+    {
+      "title": "V. High-level implementation of point addition",
+      "group": "paper",
+      "url": "/lesson/point-addition/",
+      "sourcePages": [
+        11,
+        12
+      ]
+    },
+    {
+      "title": "VI. Optimized binary gcd iteration",
+      "group": "paper",
+      "url": "/lesson/binary-gcd/",
+      "sourcePages": [
+        12
+      ]
+    },
+    {
+      "title": "VII. Modular squaring",
+      "group": "paper",
+      "url": "/lesson/modular-squaring/",
+      "sourcePages": [
+        12,
+        13
+      ]
+    },
+    {
+      "title": "Appendix A. Algorithms",
+      "group": "appendix",
+      "url": "/lesson/appendix-algorithms/",
+      "sourcePages": [
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "title": "Reference [2]. Schrottenloher’s arithmetic construction",
+      "group": "references",
+      "url": "/lesson/schrottenloher-arithmetic/",
+      "sourcePages": [
+        11,
+        12,
+        55
+      ]
+    },
+    {
+      "title": "Reference [36]. Temporary ANDs and Gidney adders",
+      "group": "references",
+      "url": "/lesson/temporary-and-adders/",
+      "sourcePages": [
+        12,
+        13,
+        15,
+        16
+      ]
+    },
+    {
+      "title": "Reference [52]. The Dialog representation",
+      "group": "references",
+      "url": "/lesson/dialog-multiplication/",
+      "sourcePages": [
+        11,
+        12,
+        45
+      ]
+    },
+    {
+      "title": "Reference [54]. Litinski’s controlled add–subtract",
+      "group": "references",
+      "url": "/lesson/litinski-add-subtract/",
+      "sourcePages": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "title": "Reference [53]. Karatsuba and the one-level square split",
+      "group": "references",
+      "url": "/lesson/karatsuba-squaring/",
+      "sourcePages": [
+        11,
+        12,
+        13,
+        47
+      ]
+    },
+    {
+      "title": "III. From an elliptic-curve key to a Fourier sample",
+      "group": "paper",
+      "url": "/lesson/shor-ecdlp/",
+      "sourcePages": [
+        7,
+        8
+      ]
+    },
+    {
+      "title": "IV. What does a 63% success probability mean?",
+      "group": "paper",
+      "url": "/lesson/success-probability/",
+      "sourcePages": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "title": "Appendix B. Every way the arithmetic can fail",
+      "group": "appendix",
+      "url": "/lesson/failure-analysis/",
+      "sourcePages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "title": "Reference [3, 24]. Why Shor works for elliptic curves",
+      "group": "references",
+      "url": "/lesson/shor-proos-zalka/",
+      "sourcePages": []
+    },
+    {
+      "title": "Reference [57]. Measuring the Fourier transform one qubit at a time",
+      "group": "references",
+      "url": "/lesson/semiclassical-qft/",
+      "sourcePages": []
+    },
+    {
+      "title": "Reference [56]. Deriving the conservative Fourier success bound",
+      "group": "references",
+      "url": "/lesson/mosca-success-bound/",
+      "sourcePages": []
+    },
+    {
+      "title": "Reference [37]. Trading phase-estimation work for classical search",
+      "group": "references",
+      "url": "/lesson/ekera-postprocessing/",
+      "sourcePages": []
+    },
+    {
+      "title": "XII E · The Eastinthillation CCZ factory",
+      "group": "paper",
+      "url": "/lesson/section-12e-eastinthillation/",
+      "sourcePages": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ]
+    },
+    {
+      "title": "Appendix E · The complete resource ledger",
+      "group": "appendix",
+      "url": "/lesson/appendix-e-resource-totals/",
+      "sourcePages": [
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "title": "Appendix G · The physical Pauli certificates",
+      "group": "appendix",
+      "url": "/lesson/appendix-g-q66-representatives/",
+      "sourcePages": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ]
+    },
+    {
+      "title": "Eastin · Eight magic states into one Toffoli resource",
+      "group": "references",
+      "url": "/lesson/eastin-toffoli-distillation/",
+      "sourcePages": []
+    },
+    {
+      "title": "Campbell–Howard · Synthesis and error checks in one matrix",
+      "group": "references",
+      "url": "/lesson/campbell-howard-synthillation/",
+      "sourcePages": []
+    },
+    {
+      "title": "Dasu et al. · Zero-level verification in C6",
+      "group": "references",
+      "url": "/lesson/dasu-c6-zero-level/",
+      "sourcePages": []
+    },
+    {
+      "title": "Goto · The C6 encoder and level-raising teleportation",
+      "group": "references",
+      "url": "/lesson/goto-state-encoding/",
+      "sourcePages": []
+    },
+    {
+      "title": "Knill · The C6 error-detecting code",
+      "group": "references",
+      "url": "/lesson/reference-knill-c6/",
+      "sourcePages": []
+    },
+    {
+      "title": "VIII · From arithmetic to executable measurements",
+      "group": "paper",
+      "url": "/lesson/compiler-overview/",
+      "sourcePages": [
+        14
+      ]
+    },
+    {
+      "title": "IX · Scheduling with Pauli frames and finite resources",
+      "group": "paper",
+      "url": "/lesson/constraints-scheduling/",
+      "sourcePages": [
+        14,
+        15
+      ]
+    },
+    {
+      "title": "X · Moving data while arithmetic is already running",
+      "group": "paper",
+      "url": "/lesson/integrated-routing/",
+      "sourcePages": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "title": "XI · What the compiler checks, and what those checks prove",
+      "group": "paper",
+      "url": "/lesson/verification/",
+      "sourcePages": [
+        19,
+        20
+      ]
+    },
+    {
+      "title": "Appendix C · Follow one point-addition window through memory",
+      "group": "appendix",
+      "url": "/lesson/appendix-integrated-routing/",
+      "sourcePages": [
+        57,
+        58
+      ]
+    },
+    {
+      "title": "Appendix D · How the hierarchy becomes a concrete schedule",
+      "group": "appendix",
+      "url": "/lesson/appendix-clifford-synthesis/",
+      "sourcePages": [
+        59,
+        60
+      ]
+    },
+    {
+      "title": "Reference · Space-time optimized table lookup",
+      "group": "references",
+      "url": "/lesson/reference-table-lookup/",
+      "sourcePages": []
+    },
+    {
+      "title": "Reference [74] · Beam-search decoding and the memory-error estimate",
+      "group": "references",
+      "url": "/lesson/reference-beam-search-decoder/",
+      "sourcePages": [
+        24,
+        25,
+        26,
+        64
+      ]
+    },
+    {
+      "title": "Mixed-fallback rotation synthesis: spend fewer T states",
+      "group": "references",
+      "url": "/lesson/reference-mixed-fallback/",
+      "sourcePages": [
+        40,
+        41
+      ]
+    },
+    {
+      "title": "Breaking 256-bit elliptic-curve signatures: a circuit-to-hardware study",
+      "group": "guide",
+      "url": "/",
+      "sourcePages": [
+        1,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "title": "I. Introduction: what does a complete resource estimate count?",
+      "group": "paper",
+      "url": "/lesson/introduction/",
+      "sourcePages": [
+        4,
+        5
+      ]
+    },
+    {
+      "title": "II. Overview: connect circuits, schedules, and hardware",
+      "group": "paper",
+      "url": "/lesson/overview/",
+      "sourcePages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "title": "Conclusion: what the estimate establishes and what remains open",
+      "group": "paper",
+      "url": "/lesson/conclusion/",
+      "sourcePages": [
+        41
+      ]
+    },
+    {
+      "title": "Notation: domains, operations, and resource units",
+      "group": "guide",
+      "url": "/lesson/notation/",
+      "sourcePages": []
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+[
+  {
+    "id": "p",
+    "symbol": "\\(p\\)",
+    "name": "field prime",
+    "definition": "Coordinates lie in the finite field \\(\\mathbb F_p\\), the integers modulo \\(p\\). For secp256k1, \\(p=2^{256}-2^{32}-977\\). This modulus controls coordinate arithmetic.",
+    "url": "/lesson/shor-ecdlp/"
+  },
+  {
+    "id": "p-prob",
+    "symbol": "\\(p\\)",
+    "name": "local error probability",
+    "definition": "On architecture and state-preparation pages, \\(p\\) is the error probability specified beside the formula: for example, a physical two-qubit Pauli error rate or an injected-state fault rate. Each model defines the event and operation counted. Arithmetic pages instead use \\(p\\) for the field prime.",
+    "url": "/lesson/xii-b-swap-loss/#model"
+  },
+  {
+    "id": "r",
+    "symbol": "\\(r\\)",
+    "name": "subgroup order",
+    "definition": "The number of distinct multiples of the generator point \\(P\\); \\([r]P=\\mathcal O\\). Scalar recovery is modulo \\(r\\), not the field prime \\(p\\).",
+    "url": "/lesson/shor-ecdlp/"
+  },
+  {
+    "id": "d",
+    "symbol": "\\(d\\)",
+    "name": "secret scalar",
+    "definition": "The unknown element of \\(\\mathbb Z_r\\) satisfying \\(Q=[d]P\\). Recovering it is the elliptic-curve discrete logarithm problem.",
+    "url": "/lesson/shor-ecdlp/"
+  },
+  {
+    "id": "curvepoint",
+    "symbol": "\\(P,Q,\\mathcal O\\)",
+    "name": "curve points",
+    "definition": "\\(P\\) is the chosen generator, \\(Q\\) is the public input point, and \\(\\mathcal O\\) is the identity element of the curve group. \\([a]P\\) denotes repeated point addition.",
+    "url": "/lesson/point-addition/"
+  },
+  {
+    "id": "c",
+    "symbol": "\\(c\\)",
+    "name": "small prime offset",
+    "definition": "\\(p=2^n-c\\), so \\(2^n\\equiv c\\pmod p\\). For secp256k1, \\(n=256\\) and \\(c=2^{32}+977\\). This relation makes reduction of high bits cheap.",
+    "url": "/lesson/modular-squaring/"
+  },
+  {
+    "id": "w",
+    "symbol": "\\(w\\)",
+    "name": "scalar-window width",
+    "definition": "The number of scalar bits handled by one coherent point lookup. The main loop uses \\(w=16\\), giving tables indexed by 16-bit addresses.",
+    "url": "/lesson/appendix-algorithms/"
+  },
+  {
+    "id": "lambda",
+    "symbol": "\\(\\lambda\\)",
+    "name": "point-addition slope",
+    "definition": "For distinct affine points with different x coordinates, \\(\\lambda=(y_2-y_1)/(x_2-x_1)\\) in \\(\\mathbb F_p\\). The division means multiplication by a modular inverse. Elsewhere the same Greek letter may denote a Poisson mean; each lesson specifies its domain.",
+    "url": "/lesson/point-addition/"
+  },
+  {
+    "id": "pf",
+    "symbol": "\\(p_f\\)",
+    "name": "approximate-oracle failure bound",
+    "definition": "For each fixed input pair, an upper bound over fresh random masks on producing either wrong coordinates or a wrong relative phase. Appendix B obtains \\(p_f\\le0.03346\\).",
+    "url": "/lesson/success-probability/"
+  },
+  {
+    "id": "p0",
+    "symbol": "\\(P_0\\)",
+    "name": "ideal algorithm success",
+    "definition": "Success probability assigned to exact arithmetic with the selected quantum Fourier measurement and classical recovery procedure. The rigorous and heuristic starting estimates must be kept separate.",
+    "url": "/lesson/success-probability/"
+  },
+  {
+    "id": "qft",
+    "symbol": "QFT / iQFT",
+    "name": "quantum Fourier transform",
+    "definition": "A unitary change of basis between a modular coordinate and its phase frequency. iQFT denotes its inverse. Measuring the result exposes the periodic relation used to recover the secret scalar.",
+    "url": "/lesson/semiclassical-qft/"
+  },
+  {
+    "id": "toffoli",
+    "symbol": "CCX",
+    "name": "Toffoli gate",
+    "definition": "The three-bit reversible map \\((a,b,t)\\mapsto(a,b,t\\oplus ab)\\). It is a controlled-controlled-X gate and the main non-Clifford logical resource of the arithmetic.",
+    "url": "/lesson/temporary-and-adders/"
+  },
+  {
+    "id": "ccz",
+    "symbol": "CCZ",
+    "name": "controlled-controlled-Z",
+    "definition": "The three-qubit unitary \\(|a,b,c\\rangle\\mapsto(-1)^{abc}|a,b,c\\rangle\\). Conjugating its third qubit by Hadamards gives a Toffoli. A CCZ resource state is \\(\\mathrm{CCZ}|+\\rangle^{\\otimes3}\\).",
+    "url": "/lesson/xii-d-claw/"
+  },
+  {
+    "id": "t",
+    "symbol": "\\(T\\)",
+    "name": "pi-over-four phase gate",
+    "definition": "\\(T=\\operatorname{diag}(1,e^{i\\pi/4})\\). A T state, up to the convention specified in a lesson, supplies this non-Clifford phase through state injection. The symbol \\(T\\) also denotes time in resource equations, where units are explicit.",
+    "url": "/lesson/section-12e-eastinthillation/"
+  },
+  {
+    "id": "clifford",
+    "symbol": "Clifford frame",
+    "name": "tracked logical transformation",
+    "definition": "A Clifford unitary maps Pauli operators to Pauli operators by conjugation. Instead of applying every such gate physically, the controller can track the accumulated map and reinterpret later measurements.",
+    "url": "/lesson/ref-logical-clinr/"
+  },
+  {
+    "id": "clinr",
+    "symbol": "CliNR",
+    "name": "Clifford noise-reduction protocol",
+    "definition": "Logical CliNR uses a prepared, checked Clifford resource and teleportation. Here it is used to clear a complicated tracked Clifford frame and restore simple logical-measurement representatives.",
+    "url": "/lesson/ref-logical-clinr/"
+  },
+  {
+    "id": "q102",
+    "symbol": "Q102",
+    "name": "main memory code",
+    "definition": "The quantum code \\([[102,22,9]]\\): 102 data qubits encode 22 logical qubits with distance 9. Device counts additionally include syndrome ancillas and replacement ions.",
+    "url": "/lesson/xii-a-device/"
+  },
+  {
+    "id": "q66",
+    "symbol": "Q66",
+    "name": "factory code",
+    "definition": "The quantum code \\([[66,4,10]]\\): 66 data qubits encode four logical qubits with distance 10. It protects the CCZ-factory state and supports the specific representatives tabulated in Appendix G.",
+    "url": "/lesson/appendix-g-q66-representatives/"
+  },
+  {
+    "id": "c6",
+    "symbol": "C6",
+    "name": "six-qubit detection code",
+    "definition": "The \\([[6,2,2]]\\) code encodes two logical qubits. In the factory it prepares a pair of low-error logical H states using error detection and postselection.",
+    "url": "/lesson/dasu-c6-zero-level/"
+  },
+  {
+    "id": "cat",
+    "symbol": "Cat state",
+    "name": "shared parity-measurement resource",
+    "definition": "A length-m cat is \\((|0\\rangle^{\\otimes m}+|1\\rangle^{\\otimes m})/\\sqrt2\\). Each cat qubit touches at most one target qubit when measuring a product Pauli operator, limiting fault spread.",
+    "url": "/lesson/ref-cat-measurements/"
+  },
+  {
+    "id": "poc",
+    "symbol": "POC",
+    "name": "physical operation cycle",
+    "definition": "The basic physical timing unit used in the architecture, \\(0.2\\,\\mathrm{ms}\\). Gate, transport, and syndrome schedules are expressed in these units.",
+    "url": "/lesson/xii-a-device/"
+  },
+  {
+    "id": "sec",
+    "symbol": "SEC",
+    "name": "syndrome-extraction cycle",
+    "definition": "One repeated measurement of the code's error checks with its physical schedule. Q102 takes 27 POCs per SEC; Q66 takes 17 POCs per SEC under the stated architecture.",
+    "url": "/lesson/xii-b-swap-loss/"
+  },
+  {
+    "id": "lm",
+    "symbol": "LM / LM2",
+    "name": "logical measurement",
+    "definition": "LM denotes a measurement of a logical Pauli operator. LM2 spans two code blocks and requires resources that join their local cat states. A logical operation can take several SECs to achieve enough readout confidence.",
+    "url": "/lesson/constraints-scheduling/"
+  },
+  {
+    "id": "support",
+    "symbol": "\\(\\operatorname{supp}(P)\\)",
+    "name": "Pauli support",
+    "definition": "The physical qubits on which a Pauli string \\(P\\) acts as X, Y, or Z rather than I. Its cardinality is the operator weight. Commuting operators need not have disjoint supports.",
+    "url": "/lesson/appendix-g-q66-representatives/"
+  },
+  {
+    "id": "representative",
+    "symbol": "Logical representative",
+    "name": "physical realization of an encoded Pauli",
+    "definition": "Different physical Pauli strings can implement the same logical operation because multiplying by a stabilizer leaves the encoded action unchanged. Choosing representatives controls weight and parallel compatibility.",
+    "url": "/lesson/xii-d-claw/"
+  },
+  {
+    "id": "gcd",
+    "symbol": "gcd",
+    "name": "greatest common divisor",
+    "definition": "The largest integer dividing two inputs. Binary-gcd updates use parity tests, subtraction, and division by two. Recording and replaying these updates implements modular multiplication or division reversibly.",
+    "url": "/lesson/binary-gcd/"
+  },
+  {
+    "id": "kappa",
+    "symbol": "\\(\\kappa\\)",
+    "name": "truncated carry width",
+    "definition": "The number of low bits through which a small modular correction is allowed to propagate. A carry beyond that range is one of the approximate arithmetic failure events.",
+    "url": "/lesson/failure-analysis/"
+  },
+  {
+    "id": "depth",
+    "symbol": "\\(D_{\\rm meas}\\)",
+    "name": "charged measurement depth",
+    "definition": "The sum of scheduled logical-measurement layers, including the expected penalties used in the resource accounting: 75,251,329 for the reported computation.",
+    "url": "/lesson/appendix-e-resource-totals/"
+  },
+  {
+    "id": "tau",
+    "symbol": "\\(\\tau\\)",
+    "name": "seconds per charged layer",
+    "definition": "Appendix E23 uses the unrounded value \\(0.0294958\\,\\mathrm{s}\\). Table I displays it as 29.50 ms. Runtime is \\(D_{\\rm meas}\\tau\\).",
+    "url": "/lesson/appendix-e-resource-totals/"
+  },
+  {
+    "id": "postselection",
+    "symbol": "Postselection",
+    "name": "accept only verified preparations",
+    "definition": "A preparation attempt is retained only if specified measurement checks pass; otherwise it restarts. Output error is conditioned on acceptance, and retries affect throughput.",
+    "url": "/lesson/section-12e-eastinthillation/"
+  },
+  {
+    "id": "swloss",
+    "symbol": "\\(p_{\\rm swap}\\)",
+    "name": "survivor-displacement probability",
+    "definition": "Conditional on a two-qubit interaction involving a loss, the probability that the surviving ion is displaced to the other position. It is not the ordinary two-qubit Pauli error probability.",
+    "url": "/lesson/appendix-f-swap-loss/"
+  }
+]

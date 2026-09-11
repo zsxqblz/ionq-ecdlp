@@ -1,0 +1,68 @@
+{
+  "source": "https://cdn.prod.website-files.com/68836d4838193cb461ebc7d2/6a9f3d3ada3cb06dec2ac20e_IonQ%20Fully%20Compiled%20End-to-End%20Resource%20Estimate%20for%20Breaking%20256-Bit%20Elliptic-Curve%20Signatures.pdf#page=8",
+  "source_table": "I",
+  "provenance": "Integer layer counts transcribed from Table I, using the unrounded 0.0294958 seconds/layer from Appendix E23; not raw simulation samples.",
+  "seconds_per_layer": 0.0294958,
+  "rows": [
+    {
+      "component": "Unary lookup",
+      "layers": 21930888,
+      "hours": 179.6858572973333
+    },
+    {
+      "component": "Modular subtraction",
+      "layers": 102144,
+      "hours": 0.8368941653333333
+    },
+    {
+      "component": "In-place multiplication",
+      "layers": 45975664,
+      "hours": 376.6913861697778
+    },
+    {
+      "component": "Modular addition",
+      "layers": 56616,
+      "hours": 0.4638706146666666
+    },
+    {
+      "component": "Square subtraction",
+      "layers": 3458840,
+      "hours": 28.33923690888889
+    },
+    {
+      "component": "Modular negation",
+      "layers": 5012,
+      "hours": 0.041064708222222225
+    },
+    {
+      "component": "Phase-fix lookup",
+      "layers": 1367548,
+      "hours": 11.204700638444445
+    },
+    {
+      "component": "Between-component routing",
+      "layers": 560,
+      "hours": 0.004588235555555556
+    },
+    {
+      "component": "CliNR turnarounds",
+      "layers": 1251684,
+      "hours": 10.255394702
+    },
+    {
+      "component": "Window iQFT",
+      "layers": 11424,
+      "hours": 0.09360000533333333
+    },
+    {
+      "component": "Initial lookup",
+      "layers": 1090541,
+      "hours": 8.935105341055555
+    },
+    {
+      "component": "Initial iQFT",
+      "layers": 408,
+      "hours": 0.003342857333333333
+    }
+  ]
+}

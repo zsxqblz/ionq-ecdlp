@@ -1,0 +1,363 @@
+{
+  "method": "Words in authored lesson HTML, including tables, captions and optional derivations; excludes TeX, SVG labels, navigation, repeated glossary and expanded source-figure metadata. Core words additionally exclude disclosures. The interactive Fourier explanation is counted after placeholder expansion.",
+  "pages": [
+    {
+      "slug": "xii-architecture",
+      "before_prose_words": 574,
+      "after_prose_words": 270,
+      "before_core_words": 574,
+      "after_core_words": 270
+    },
+    {
+      "slug": "xii-a-device",
+      "before_prose_words": 610,
+      "after_prose_words": 291,
+      "before_core_words": 610,
+      "after_core_words": 291
+    },
+    {
+      "slug": "xii-b-swap-loss",
+      "before_prose_words": 845,
+      "after_prose_words": 466,
+      "before_core_words": 717,
+      "after_core_words": 388
+    },
+    {
+      "slug": "xii-c-reusable-cats",
+      "before_prose_words": 888,
+      "after_prose_words": 323,
+      "before_core_words": 780,
+      "after_core_words": 323
+    },
+    {
+      "slug": "xii-d-claw",
+      "before_prose_words": 1123,
+      "after_prose_words": 553,
+      "before_core_words": 1123,
+      "after_core_words": 553
+    },
+    {
+      "slug": "appendix-f-swap-loss",
+      "before_prose_words": 459,
+      "after_prose_words": 205,
+      "before_core_words": 459,
+      "after_core_words": 205
+    },
+    {
+      "slug": "ref-walking-cat",
+      "before_prose_words": 914,
+      "after_prose_words": 380,
+      "before_core_words": 840,
+      "after_core_words": 352
+    },
+    {
+      "slug": "ref-cat-measurements",
+      "before_prose_words": 825,
+      "after_prose_words": 384,
+      "before_core_words": 825,
+      "after_core_words": 384
+    },
+    {
+      "slug": "ref-gate-teleportation",
+      "before_prose_words": 692,
+      "after_prose_words": 352,
+      "before_core_words": 692,
+      "after_core_words": 352
+    },
+    {
+      "slug": "ref-logical-clinr",
+      "before_prose_words": 879,
+      "after_prose_words": 408,
+      "before_core_words": 879,
+      "after_core_words": 408
+    },
+    {
+      "slug": "ref-loss-detection",
+      "before_prose_words": 1025,
+      "after_prose_words": 488,
+      "before_core_words": 1025,
+      "after_core_words": 488
+    },
+    {
+      "slug": "point-addition",
+      "before_prose_words": 903,
+      "after_prose_words": 309,
+      "before_core_words": 780,
+      "after_core_words": 309
+    },
+    {
+      "slug": "binary-gcd",
+      "before_prose_words": 923,
+      "after_prose_words": 363,
+      "before_core_words": 923,
+      "after_core_words": 363
+    },
+    {
+      "slug": "modular-squaring",
+      "before_prose_words": 919,
+      "after_prose_words": 326,
+      "before_core_words": 780,
+      "after_core_words": 326
+    },
+    {
+      "slug": "appendix-algorithms",
+      "before_prose_words": 1024,
+      "after_prose_words": 371,
+      "before_core_words": 1024,
+      "after_core_words": 371
+    },
+    {
+      "slug": "schrottenloher-arithmetic",
+      "before_prose_words": 833,
+      "after_prose_words": 407,
+      "before_core_words": 833,
+      "after_core_words": 407
+    },
+    {
+      "slug": "temporary-and-adders",
+      "before_prose_words": 757,
+      "after_prose_words": 367,
+      "before_core_words": 757,
+      "after_core_words": 367
+    },
+    {
+      "slug": "dialog-multiplication",
+      "before_prose_words": 789,
+      "after_prose_words": 311,
+      "before_core_words": 789,
+      "after_core_words": 311
+    },
+    {
+      "slug": "litinski-add-subtract",
+      "before_prose_words": 753,
+      "after_prose_words": 352,
+      "before_core_words": 753,
+      "after_core_words": 352
+    },
+    {
+      "slug": "karatsuba-squaring",
+      "before_prose_words": 717,
+      "after_prose_words": 362,
+      "before_core_words": 717,
+      "after_core_words": 362
+    },
+    {
+      "slug": "shor-ecdlp",
+      "before_prose_words": 938,
+      "after_prose_words": 386,
+      "before_core_words": 938,
+      "after_core_words": 339
+    },
+    {
+      "slug": "success-probability",
+      "before_prose_words": 1277,
+      "after_prose_words": 372,
+      "before_core_words": 1157,
+      "after_core_words": 306
+    },
+    {
+      "slug": "failure-analysis",
+      "before_prose_words": 2101,
+      "after_prose_words": 612,
+      "before_core_words": 2101,
+      "after_core_words": 533
+    },
+    {
+      "slug": "shor-proos-zalka",
+      "before_prose_words": 802,
+      "after_prose_words": 349,
+      "before_core_words": 802,
+      "after_core_words": 349
+    },
+    {
+      "slug": "semiclassical-qft",
+      "before_prose_words": 808,
+      "after_prose_words": 297,
+      "before_core_words": 808,
+      "after_core_words": 297
+    },
+    {
+      "slug": "mosca-success-bound",
+      "before_prose_words": 734,
+      "after_prose_words": 284,
+      "before_core_words": 734,
+      "after_core_words": 284
+    },
+    {
+      "slug": "ekera-postprocessing",
+      "before_prose_words": 977,
+      "after_prose_words": 365,
+      "before_core_words": 921,
+      "after_core_words": 331
+    },
+    {
+      "slug": "section-12e-eastinthillation",
+      "before_prose_words": 1630,
+      "after_prose_words": 656,
+      "before_core_words": 1461,
+      "after_core_words": 656
+    },
+    {
+      "slug": "appendix-e-resource-totals",
+      "before_prose_words": 808,
+      "after_prose_words": 417,
+      "before_core_words": 808,
+      "after_core_words": 417
+    },
+    {
+      "slug": "appendix-g-q66-representatives",
+      "before_prose_words": 1644,
+      "after_prose_words": 364,
+      "before_core_words": 612,
+      "after_core_words": 364
+    },
+    {
+      "slug": "eastin-toffoli-distillation",
+      "before_prose_words": 609,
+      "after_prose_words": 332,
+      "before_core_words": 609,
+      "after_core_words": 332
+    },
+    {
+      "slug": "campbell-howard-synthillation",
+      "before_prose_words": 642,
+      "after_prose_words": 375,
+      "before_core_words": 642,
+      "after_core_words": 375
+    },
+    {
+      "slug": "dasu-c6-zero-level",
+      "before_prose_words": 777,
+      "after_prose_words": 438,
+      "before_core_words": 777,
+      "after_core_words": 438
+    },
+    {
+      "slug": "goto-state-encoding",
+      "before_prose_words": 799,
+      "after_prose_words": 396,
+      "before_core_words": 799,
+      "after_core_words": 396
+    },
+    {
+      "slug": "reference-knill-c6",
+      "before_prose_words": 721,
+      "after_prose_words": 334,
+      "before_core_words": 721,
+      "after_core_words": 334
+    },
+    {
+      "slug": "compiler-overview",
+      "before_prose_words": 805,
+      "after_prose_words": 361,
+      "before_core_words": 725,
+      "after_core_words": 361
+    },
+    {
+      "slug": "constraints-scheduling",
+      "before_prose_words": 795,
+      "after_prose_words": 329,
+      "before_core_words": 795,
+      "after_core_words": 329
+    },
+    {
+      "slug": "integrated-routing",
+      "before_prose_words": 1059,
+      "after_prose_words": 410,
+      "before_core_words": 1059,
+      "after_core_words": 410
+    },
+    {
+      "slug": "verification",
+      "before_prose_words": 827,
+      "after_prose_words": 370,
+      "before_core_words": 827,
+      "after_core_words": 370
+    },
+    {
+      "slug": "appendix-integrated-routing",
+      "before_prose_words": 810,
+      "after_prose_words": 340,
+      "before_core_words": 810,
+      "after_core_words": 340
+    },
+    {
+      "slug": "appendix-clifford-synthesis",
+      "before_prose_words": 1018,
+      "after_prose_words": 389,
+      "before_core_words": 1018,
+      "after_core_words": 389
+    },
+    {
+      "slug": "reference-table-lookup",
+      "before_prose_words": 808,
+      "after_prose_words": 357,
+      "before_core_words": 808,
+      "after_core_words": 357
+    },
+    {
+      "slug": "reference-beam-search-decoder",
+      "before_prose_words": 881,
+      "after_prose_words": 366,
+      "before_core_words": 800,
+      "after_core_words": 366
+    },
+    {
+      "slug": "reference-mixed-fallback",
+      "before_prose_words": 849,
+      "after_prose_words": 321,
+      "before_core_words": 849,
+      "after_core_words": 321
+    },
+    {
+      "slug": "index",
+      "before_prose_words": 748,
+      "after_prose_words": 300,
+      "before_core_words": 748,
+      "after_core_words": 300
+    },
+    {
+      "slug": "introduction",
+      "before_prose_words": 712,
+      "after_prose_words": 179,
+      "before_core_words": 712,
+      "after_core_words": 179
+    },
+    {
+      "slug": "overview",
+      "before_prose_words": 943,
+      "after_prose_words": 333,
+      "before_core_words": 943,
+      "after_core_words": 333
+    },
+    {
+      "slug": "conclusion",
+      "before_prose_words": 701,
+      "after_prose_words": 255,
+      "before_core_words": 701,
+      "after_core_words": 255
+    },
+    {
+      "slug": "notation",
+      "before_prose_words": 5,
+      "after_prose_words": 5,
+      "before_core_words": 5,
+      "after_core_words": 5
+    },
+    {
+      "slug": "audit",
+      "before_prose_words": 1352,
+      "after_prose_words": 855,
+      "before_core_words": 1352,
+      "after_core_words": 337
+    }
+  ],
+  "totals": {
+    "before_prose_words": 44032,
+    "after_prose_words": 18435,
+    "before_core_words": 41922,
+    "after_core_words": 17585
+  },
+  "original_circuits_preserved": 53,
+  "source_routes_metadata_anchors_preserved": true
+}
