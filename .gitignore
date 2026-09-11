@@ -1,1 +1,3 @@
+/dist/
+/website/__pycache__/
 .wrangler/
