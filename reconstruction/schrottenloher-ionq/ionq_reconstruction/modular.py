@@ -6,7 +6,7 @@ This small, explicitly charged deviation avoids assuming the unpublished layout.
 """
 from qarton.arithmetic import GidneyAdder,ControlledGidneyConstantAdder
 from qarton.binary_operations import EfficientMCX
-from qarton.circuit import Circuit,InPlaceCircuit,BoolType,UIntType,UInt,memoize,qc_reg_cast,qc_reg_from_bits,qc_bool_reg,CZ_GATE
+from qarton.circuit import Circuit,InPlaceCircuit,BoolType,UIntType,UInt,memoize,qc_reg_cast,qc_reg_from_bits,qc_bool_reg,CZ_GATE,Z_GATE
 from .squaring import PhaseLT,uint,P
 from .primitives import FixedAdder
 
@@ -40,10 +40,17 @@ class SignedModularAdder(InPlaceCircuit):
         self.append(FixedAdder(kappa,c,True),h,uint(v[:kappa]))
         m=self.get_classical(1);self.h(h[0]);self.msr(h[0],m[0])
         one=self.add_anc(1);self.x(one[0])
-        # Addition uses positive-zero encoding before its final transposition.
-        # Compare 2*v+b < 2*u+1: <= in addition, < in subtraction.
-        self.append_controlled(PhaseLT(delta+1),uint(qc_reg_from_bits(b,v[n-delta:])),uint(qc_reg_from_bits(one,u[n-delta:])),controls=[m[0]])
-        if repair_zero_target:self.append_basic_gate_controlled(CZ_GATE,b[0],zflag[0],controls=[m[0]])
+        if repair_zero_target:
+            # Legacy comparison retained for explicit tests of the old promise repair.
+            self.append_controlled(PhaseLT(delta+1),uint(qc_reg_from_bits(b,v[n-delta:])),uint(qc_reg_from_bits(one,u[n-delta:])),controls=[m[0]])
+            self.append_basic_gate_controlled(CZ_GATE,b[0],zflag[0],controls=[m[0]])
+        else:
+            # Choose carry=1 on equal top windows, in both sign branches.
+            # (-1)^[v_top <= u_top] = -(-1)^[u_top < v_top].
+            # This handles the noncanonical complement of a zero subtraction target
+            # without retaining a history of zero-target promises.
+            self.append_basic_gate_controlled(Z_GATE,one[0],controls=[m[0]])
+            self.append_controlled(PhaseLT(delta),uint(u[n-delta:]),uint(v[n-delta:]),controls=[m[0]])
         self.x(one[0]);self.assert_anc(one,pad,h);self.release_classical(m)
         for t in v:self.cx(b[0],t)
         if handle_zero:swap_zero()

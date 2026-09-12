@@ -27,14 +27,20 @@
     "qasm_output.py": "3af389de53c690d8188d778d34e9f9130103347c5d11216e0c3c5e09ee490e11"
   },
   "new_code_sha256": {
-    "ionq_reconstruction/gcd.py": "bacc3219d3571795149b6062c89f4f656dabf8217c46a1c2371c125ecfec4e35",
+    "ionq_reconstruction/gcd.py": "6627b2142198102a7aff0cc27d19a28f24eafb1b9814d93d65d6a3f59036f260",
     "ionq_reconstruction/verify_phase.py": "b1646f4e08c5581c26e5896f5c24402d1e031e0052ecc91ec1066e7a438f1ace",
-    "ionq_reconstruction/modular.py": "1ebaa7ae78bdda03fc6d064494c310b6f78634e7a2fd54166da19830e328f833",
+    "ionq_reconstruction/modular.py": "530da3a56ebfcfaa13d1890e3a715d25b7fb63b2c65a56291dfda3b3cb7a4337",
+    "ionq_reconstruction/draw_diagrams.py": "57f469730fffaca811b538f8bc9a1417f23a5b8cffac7342b00e5bc5699cbe80",
     "ionq_reconstruction/counts.py": "3033c1880622e56e96d0acde8bda894dfa2cfd442915df028d6288af57a77341",
     "ionq_reconstruction/__init__.py": "032c9b777033218136c6fff0f828339a418376f0e3dcfd984ca5565356f99dd3",
-    "ionq_reconstruction/point_add.py": "e478fa00b90e113df60d2e1672555cf11383c996687a178cb02d556cbc478a1b",
+    "ionq_reconstruction/lookup.py": "4bb4fc542421c24250fe68cf940b99ad6f6aa1b72a326dcf0f94961ac2ebfd96",
+    "ionq_reconstruction/point_add.py": "f1865a8143eb88dc10365068fcc7a945d9a77f64aaf4ab03591212cf26e2f298",
+    "ionq_reconstruction/verify_v2.py": "63518d6d0de1144b6c726b415ec32f8133f3f47d964349d52ca4a769f611e3c2",
+    "ionq_reconstruction/audit_boundaries.py": "dde4eaa5991e38373ce80d2d878a9c537154cea4ed2013abfe6bd02c9ec78157",
     "ionq_reconstruction/primitives.py": "bb6f1cb9516295e6082e0eeb496c4cbabf048df6731ea6bc0688a28862a0f687",
+    "ionq_reconstruction/counts_v2.py": "344cb52a66fc70f2041a1132080f7294f37eda2dcb4d472eeadf814a72e3640c",
     "ionq_reconstruction/verify.py": "3149cbfed7bac09d10982b17f474f2482461898b5d0581fe820fb2b32375eb5e",
     "ionq_reconstruction/squaring.py": "037e7d4a87259663a0e228ae5ef574976d9db52c12b674729106a1735a1084c0"
-  }
+  },
+  "revision": 2
 }
