@@ -24,9 +24,9 @@ def fourier_grid(kind,d=3,c=2):
 def fourier_visual():
     return r'''<section class="fourier-visual" aria-labelledby="fourier-visual-title">
 <h3 id="fourier-visual-title">Move the coset; the Fourier line stays put</h3>
-<p class="section-purpose"><strong>Purpose.</strong> Show that the measured output point changes the input line, but not the Fourier probabilities used to recover the key.</p>
-<p>This exact-order toy model uses \(r=7\), with seven states per register. Solid circles mark outcomes of probability \(1/7\); small dots have probability zero. It illustrates the group identity, before binary-register broadening.</p>
-<p>Condition on the target containing the point \([c]P\): its compatible inputs obey \(k+dl=c\pmod7\). The target stores point coordinates, not the scalar c. This is a way to analyze the state, not required postselection: any target outcome works, and leaving it unmeasured gives the same Fourier probabilities.</p>
+<p>Choose a secret and move the output-point slider. The input pairs move to a different parallel line. After the Fourier transform, the same frequencies survive: their line reveals the secret.</p>
+<p>To see this exactly, use \(r=7\), with seven states per register. Solid circles mark outcomes of probability \(1/7\); small dots have probability zero. Seven-state registers give the ideal group transform; the binary registers in the full algorithm broaden these peaks.</p>
+<p>Suppose the target contains the point \([c]P\): its compatible inputs obey \(k+dl=c\pmod7\). Here c labels that point; the target register holds its coordinates. Every possible target outcome gives a line of this form. We can therefore analyze one line at a time, whether or not we actually measure the target.</p>
 <div class="visual-controls">
 <label for="fourier-d">Secret scalar \(d\): <output id="fourier-d-value" for="fourier-d">3</output><input type="range" id="fourier-d" min="0" max="6" step="1" value="3"></label>
 <label for="fourier-c">Output point \([c]P\): <output id="fourier-c-value" for="fourier-c">2</output><input type="range" id="fourier-c" min="0" max="6" step="1" value="2"></label>

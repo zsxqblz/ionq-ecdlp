@@ -1,11 +1,11 @@
-# Public blog revision — 11 September 2026
+# Narration-first revision — 11 September 2026
 
-All 50 lessons retain their section anchors, source references, worked circuits, and derivations. Openings now explain each mechanism directly. The landing page follows the argument from Fourier sampling to arithmetic, scheduling, and hardware. Removed 290 repeated editorial purpose panels, preserving appended definitions. The conclusion collects limitations and distinguishes one attempt from expected repeated-attempt cost.
+The second revision starts from the source paper and a talk outline in `TALK-PLAN.md`. All 50 page summaries and all 635 original explanatory paragraphs have been rewritten. Sections now introduce an operation and its purpose, work through the construction, and explain the notation as it becomes necessary. Added narration also connects previously abrupt equations and figures. The generated Fourier demonstration now explains its experiment directly.
 
-The section-by-section record is `data/blog-revision.json`. This is an exposition and consistency review, with headline quantities compared to the source paper and executable teaching examples checked. It does not reproduce the authors’ internal compiler, decoder simulations, or full hardware estimate.
+The content retains the exact ordered text of 73 SVGs, 66 tables, 213 displayed equations, and 22 source-figure references. The two generated Fourier SVGs and all interactive controls remain. Source citations, section anchors, and downloadable evidence are preserved. The section-by-section record is `data/blog-revision.json`.
 
-The build now accepts `SITE_BASE_PATH=/ionq-ecdlp`, covering navigation, source figures, data downloads, and the runtime chart. HTML-sensitive comparisons are escaped before math rendering. The static audit accepts the same prefix. Runtime data-loading failure now displays an explicit fallback message.
+Validation: 50 pages, 75 SVGs, 4,020 rendered math expressions, zero static audit errors or warnings. Division replay, context examples, recursive lookup and measurement cleanup, and all 49 Fourier-control settings pass. A materialized standalone copy builds successfully. Desktop and 390-pixel browser passes reached the end of all 50 pages with no page-wide overflow or rendered math errors; representative screenshots and the Fourier controls were inspected.
 
-Validation: 50 pages, 4,177 rendered math expressions, 75 explanatory SVGs; zero static link, anchor, math, or image-alt errors. Division replay, context examples, lookup/measurement cleanup, and all 49 Fourier-control settings pass. The imported context test expected seven diagrams, but the original repository contains six; removed the unrelated fixed-count assertion while preserving algebraic checks. The materialized copy builds and audits independently without symlinks.
+## Limitations
 
-In-app browser: all 50 pages checked at desktop and 390-pixel widths for rendered headings, math errors, page overflow, and footer presence. No page-wide overflow or KaTeX error appeared. Representative screenshots and interactive controls were also inspected. Source circuit drawings intentionally scroll within their own containers on small screens.
+This is a source-grounded exposition revision and a check of executable teaching examples. It does not independently reproduce the authors’ internal compiler, decoder simulations, or full hardware resource estimate. Historical audit records remain identified as such in the coverage page.
