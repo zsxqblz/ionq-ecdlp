@@ -1,0 +1,6 @@
+{
+  "success": true,
+  "cases": 3,
+  "mask": 1,
+  "checks": "Reused GCD ancillas; short mask; basis outputs, phases, workspace, coherent lookup"
+}

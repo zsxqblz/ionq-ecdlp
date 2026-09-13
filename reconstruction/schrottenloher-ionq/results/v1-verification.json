@@ -1,0 +1,88 @@
+{
+  "seed_inputs": 20260912,
+  "seed_measurements": 923578,
+  "groups": {
+    "exhaustive_integer_squares_1_to_8_bits": {
+      "passed": 510,
+      "seconds": 0.181
+    },
+    "fully_decomposed_exact_primitives": {
+      "passed": 709,
+      "seconds": 0.077
+    },
+    "independent_modular_product_reference": {
+      "passed": 10000,
+      "seconds": 1.708
+    },
+    "signed_modular_addition_256_bits": {
+      "passed": 1041,
+      "seconds": 7.056
+    },
+    "modular_square_256_bits": {
+      "passed": 201,
+      "seconds": 124.249
+    },
+    "multiplication_256_bits": {
+      "passed": 101,
+      "seconds": 336.948
+    },
+    "division_256_bits": {
+      "passed": 101,
+      "seconds": 323.734
+    },
+    "point_addition_with_coherent_lookup": {
+      "passed": 33,
+      "seconds": 236.083
+    },
+    "original_repository_point_addition_control": {
+      "passed": 10,
+      "seconds": 27.832
+    }
+  },
+  "failures": [],
+  "limitations": [
+    "Large tests expand every new algorithm module but use the existing exact-arithmetic dummy implementations.",
+    "Small tests separately decompose exact primitives into gates.",
+    "Random tests do not reproduce IonQ million-sample confidence bound or hardware compilation.",
+    "Zero/small-residue adversarial cases can fail in truncated arithmetic and are recorded separately."
+  ],
+  "adversarial_truncation_failures": [
+    {
+      "b": 0,
+      "u": "0x1",
+      "v": "0x0",
+      "error": "AssertionError(('value', {(0, 1, 115792089237316195423570985008687907853269984665640564039457584007908834671664): (1+0j)}, (0, 1, 1)))"
+    },
+    {
+      "b": 0,
+      "u": "0x0",
+      "v": "0x1",
+      "error": "AssertionError(('phase', {(0, 0, 1): (-1+0j)}, (0, 0, 1)))"
+    },
+    {
+      "b": 0,
+      "u": "0x1",
+      "v": "0x1",
+      "error": "AssertionError(('value', {(0, 1, 115792089237316195423570985008687907853269984665640564039457584007908834671661): (-1+0j)}, (0, 1, 2)))"
+    },
+    {
+      "b": 0,
+      "u": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "v": "0x1",
+      "error": "AssertionError(('phase', {(0, 115792089237316195423570985008687907853269984665640564039457584007908834671662, 0): (-1+0j)}, (0, 115792089237316195423570985008687907853269984665640564039457584007908834671662, 0)))"
+    },
+    {
+      "b": 1,
+      "u": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "v": "0x1",
+      "error": "AssertionError(('phase', {(1, 115792089237316195423570985008687907853269984665640564039457584007908834671662, 2): (-1+0j)}, (1, 115792089237316195423570985008687907853269984665640564039457584007908834671662, 2)))"
+    },
+    {
+      "b": 0,
+      "u": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "v": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "error": "AssertionError(('value', {(0, 115792089237316195423570985008687907853269984665640564039457584007908834671662, 2): (1+0j)}, (0, 115792089237316195423570985008687907853269984665640564039457584007908834671662, 115792089237316195423570985008687907853269984665640564039457584007908834671661)))"
+    }
+  ],
+  "success": true
+}
