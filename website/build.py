@@ -77,6 +77,8 @@ def nav(current):
  return top,side
 def template(p):
  body=p['body'].replace('[[notation]]',definitions('page-'))
+ if p['slug']!='reproduction':
+  body='<p class="evidence"><strong>Executable reproduction:</strong> <a href="/lesson/reproduction/">Read the circuit reconstruction and its results</a> · <a href="https://github.com/zsxqblz/ionq-ecdlp/tree/main/reconstruction/schrottenloher-ionq">Code and run instructions</a>.</p>'+body
  body=body.replace('<div data-fourier-visual></div>',fourier_visual())
  body=re.sub(r'<div\s+data-paper-figure=[\"\']([^\"\']+)[\"\']\s*></div>',figure,body)
  for symbol,slug in [('p','p'),('r','r'),('d','d'),('p_f','pf'),('P_0','p0'),('w','w'),('\\kappa','kappa')]:

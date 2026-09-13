@@ -1,0 +1,223 @@
+{
+  "success": true,
+  "basis_trajectories": 896,
+  "cases": [
+    {
+      "b": 0,
+      "u": "0x0",
+      "v": "0x0",
+      "output": "0x0",
+      "wanted": "0x0",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": false,
+      "events": [
+        "noncanonical reduced intermediate"
+      ],
+      "observed_signs": [
+        1
+      ]
+    },
+    {
+      "b": 1,
+      "u": "0x0",
+      "v": "0x0",
+      "output": "0x0",
+      "wanted": "0x0",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": false,
+      "events": [
+        "noncanonical reduced intermediate"
+      ],
+      "observed_signs": [
+        1
+      ]
+    },
+    {
+      "b": 0,
+      "u": "0x1",
+      "v": "0x0",
+      "output": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc30",
+      "wanted": "0x1",
+      "wrong_value": true,
+      "phase_error_if_measurement_one": false,
+      "events": [
+        "noncanonical reduced intermediate"
+      ],
+      "observed_signs": [
+        1
+      ]
+    },
+    {
+      "b": 1,
+      "u": "0x1",
+      "v": "0x0",
+      "output": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "wanted": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": false,
+      "events": [],
+      "observed_signs": [
+        1
+      ]
+    },
+    {
+      "b": 0,
+      "u": "0x0",
+      "v": "0x1",
+      "output": "0x1",
+      "wanted": "0x1",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": true,
+      "events": [
+        "carry phase predicate disagrees"
+      ],
+      "observed_signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "b": 1,
+      "u": "0x0",
+      "v": "0x1",
+      "output": "0x1",
+      "wanted": "0x1",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": false,
+      "events": [
+        "noncanonical reduced intermediate"
+      ],
+      "observed_signs": [
+        1
+      ]
+    },
+    {
+      "b": 0,
+      "u": "0x1",
+      "v": "0x1",
+      "output": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2d",
+      "wanted": "0x2",
+      "wrong_value": true,
+      "phase_error_if_measurement_one": true,
+      "events": [
+        "carry phase predicate disagrees",
+        "post: false-positive zero/p swap"
+      ],
+      "observed_signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "b": 1,
+      "u": "0x1",
+      "v": "0x1",
+      "output": "0x0",
+      "wanted": "0x0",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": false,
+      "events": [
+        "noncanonical reduced intermediate"
+      ],
+      "observed_signs": [
+        1
+      ]
+    },
+    {
+      "b": 0,
+      "u": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "v": "0x1",
+      "output": "0x0",
+      "wanted": "0x0",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": true,
+      "events": [
+        "carry phase predicate disagrees",
+        "noncanonical reduced intermediate"
+      ],
+      "observed_signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "b": 1,
+      "u": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "v": "0x1",
+      "output": "0x2",
+      "wanted": "0x2",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": false,
+      "events": [
+        "noncanonical reduced intermediate"
+      ],
+      "observed_signs": [
+        1
+      ]
+    },
+    {
+      "b": 0,
+      "u": "0x1",
+      "v": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "output": "0x0",
+      "wanted": "0x0",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": false,
+      "events": [
+        "noncanonical reduced intermediate"
+      ],
+      "observed_signs": [
+        1
+      ]
+    },
+    {
+      "b": 1,
+      "u": "0x1",
+      "v": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "output": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2d",
+      "wanted": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2d",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": true,
+      "events": [
+        "carry phase predicate disagrees"
+      ],
+      "observed_signs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "b": 0,
+      "u": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "v": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "output": "0x2",
+      "wanted": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2d",
+      "wrong_value": true,
+      "phase_error_if_measurement_one": false,
+      "events": [
+        "post: false-positive zero/p swap"
+      ],
+      "observed_signs": [
+        1
+      ]
+    },
+    {
+      "b": 1,
+      "u": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "v": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2e",
+      "output": "0x0",
+      "wanted": "0x0",
+      "wrong_value": false,
+      "phase_error_if_measurement_one": true,
+      "events": [
+        "carry phase predicate disagrees",
+        "noncanonical reduced intermediate"
+      ],
+      "observed_signs": [
+        -1,
+        1
+      ]
+    }
+  ],
+  "meaning": "Success means the independent diagnosis matches the circuit; it does not mean these adversarial arithmetic inputs are all correct."
+}

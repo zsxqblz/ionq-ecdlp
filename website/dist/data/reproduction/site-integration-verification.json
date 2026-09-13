@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-12",
+  "source_revision": "23bc0ea",
+  "merge_commit": "4cbd71b",
+  "runtime": "3.14.6",
+  "environment": "Isolated project venv using pinned requirements and Qarton revision; macOS",
+  "counts_match_archived_json": true,
+  "boundary_audit_matches_archived_json": true,
+  "targeted_verification": {
+    "seed": 2609122,
+    "measurement_seed": 923591,
+    "groups": {
+      "fully_decomposed_delayed_lookup_measurements": {
+        "passed": 240,
+        "seconds": 2.424
+      },
+      "signed_addition_and_unflagged_zero_targets": {
+        "passed": 2200,
+        "seconds": 23.19
+      },
+      "multiplication_inclusive_carry": {
+        "passed": 25,
+        "seconds": 135.172
+      },
+      "division_without_promise_flags": {
+        "passed": 25,
+        "seconds": 114.242
+      },
+      "complete_point_with_delayed_lookup": {
+        "passed": 9,
+        "seconds": 96.218
+      }
+    },
+    "success": true
+  },
+  "boundary_trajectories": 896,
+  "scope": "Fresh rerun of counts_v2, verify_v2, audit_boundaries; no full hardware or million-sample reproduction."
+}

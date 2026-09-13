@@ -20,6 +20,12 @@
     ]
   },
   {
+    "title": "Reproduction: build the arithmetic and account for the savings",
+    "url": "/ionq-ecdlp/lesson/reproduction/",
+    "group": "I \u00b7 Overview",
+    "sourcePages": []
+  },
+  {
     "title": "III. From an elliptic-curve key to a Fourier sample",
     "url": "/ionq-ecdlp/lesson/shor-ecdlp/",
     "group": "II \u00b7 ECDLP",

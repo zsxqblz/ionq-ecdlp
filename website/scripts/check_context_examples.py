@@ -6,8 +6,9 @@ ROOT = Path(__file__).resolve().parents[1]
 pages = [p for f in (ROOT / "content").glob("*.json")
          for p in json.loads(f.read_text())]
 report = json.loads((ROOT / "data/context-audit.json").read_text())
-assert {p["slug"] for p in pages} == {p["slug"] for p in report["lessons"]}
-assert len(pages) == len(report["lessons"]) == 50
+historical = {p["slug"] for p in report["lessons"]}
+assert len(historical) == 50
+assert {p["slug"] for p in pages} == historical | {"reproduction"}
 assert all(p["body"].strip() for p in pages)
 
 # Windowing over an abstract cyclic group of order 19. j remains unchanged;
@@ -39,4 +40,4 @@ def syndrome(e):
 assert syndrome((0,1,0)) == syndrome((1,0,1)) == (1,1)
 assert 0b1111 + 0b0011 == 0b10010
 assert ((0b1111 + 0b0011) & 15) == 0b0010
-print("PASS: 50-lesson coverage, window cleanup, phase readout, Tanner edges, carry example.")
+print("PASS: historical 50-lesson coverage plus reproduction, window cleanup, phase readout, Tanner edges, carry example.")

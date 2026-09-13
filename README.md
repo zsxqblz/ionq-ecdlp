@@ -2,6 +2,10 @@
 
 Source and built pages for the IonQ elliptic-curve discrete-logarithm teaching notes.
 
+## Executable reproduction
+
+The [reconstruction code and report](reconstruction/schrottenloher-ionq/RECONSTRUCTION.md) are merged into this repository. Read the [talk-style reproduction lesson](https://projects.yifanfrankzhang.com/ionq-ecdlp/lesson/reproduction/) for the logical gate counts, verification, and limitations. This reconstructs arithmetic circuits, not the full physical resource estimate.
+
 ## Build
 
 Requires Python 3 and Node.js. KaTeX and its fonts are included.
